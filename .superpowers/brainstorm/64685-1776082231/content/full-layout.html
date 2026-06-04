@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Layout Overview</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d0d0d; font-family: 'Segoe UI', system-ui, sans-serif; color: #e5e5e5; font-size: 13px; }
+
+  .page-title {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    border-bottom: 1px solid #1e1e1e;
+    font-size: 12px;
+    color: #555;
+    letter-spacing: 2px;
+  }
+  .page-title span { color: #22c55e; }
+
+  /* Layout overview as mini sections */
+  .section-block {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 28px 48px;
+    position: relative;
+  }
+  .section-block:hover { background: rgba(34,197,94,0.02); }
+
+  .section-num {
+    font-family: monospace;
+    font-size: 10px;
+    color: #22c55e;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+  }
+  .section-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .section-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 16px;
+  }
+  .section-preview-mini {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+  }
+
+  /* HERO preview */
+  .hero-mini {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-mini-blob {
+    position: absolute; right: -20px; top: -20px;
+    width: 150px; height: 150px;
+    background: radial-gradient(circle, rgba(34,197,94,0.25) 0%, transparent 70%);
+  }
+  .hero-mini-text h2 { font-size: 20px; font-weight: 800; color: #fff; }
+  .hero-mini-text p { font-size: 11px; color: #22c55e; font-family: monospace; margin-bottom: 4px; }
+  .hero-mini-text span { font-size: 11px; color: #666; }
+  .hero-mini-btns { display: flex; gap: 8px; margin-top: 10px; }
+  .mini-btn-a { background: #22c55e; color: #000; padding: 5px 14px; border-radius: 5px; font-size: 11px; font-weight: 600; }
+  .mini-btn-b { border: 1px solid #333; color: #aaa; padding: 5px 14px; border-radius: 5px; font-size: 11px; }
+  .nav-mini {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(17,17,17,0.9); padding: 8px 16px; border-radius: 6px;
+    border: 1px solid #222; margin-bottom: 12px;
+    font-size: 11px;
+  }
+  .nav-mini .logo { color: #22c55e; font-weight: 700; }
+  .nav-mini .links { display: flex; gap: 16px; color: #666; }
+  .nav-mini .toggle { border: 1px solid #333; padding: 2px 10px; border-radius: 12px; color: #22c55e; font-size: 10px; }
+
+  /* ABOUT preview */
+  .about-mini { display: flex; gap: 20px; align-items: flex-start; }
+  .about-photo { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #1a2a1a, #22c55e33); border: 2px solid #22c55e44; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .about-content h3 { color: #fff; font-size: 14px; margin-bottom: 4px; }
+  .about-content p { color: #666; font-size: 11px; line-height: 1.6; }
+  .edu-tags { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .edu-tag { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); color: #22c55e; padding: 2px 8px; border-radius: 4px; font-size: 10px; }
+  .lang-dots { display: flex; gap: 12px; margin-top: 8px; }
+  .lang-dot { font-size: 10px; color: #555; }
+  .lang-dot span { color: #22c55e; }
+
+  /* PROJECTS preview */
+  .project-grid-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .proj-card { background: #1a1a1a; border: 1px solid #252525; border-radius: 6px; padding: 12px; }
+  .proj-card:hover { border-color: #22c55e; }
+  .proj-emoji { font-size: 16px; margin-bottom: 6px; }
+  .proj-name { font-size: 11px; font-weight: 600; color: #ddd; margin-bottom: 4px; }
+  .proj-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+  .proj-tag { background: rgba(34,197,94,0.07); color: #22c55e; border: 1px solid rgba(34,197,94,0.15); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-family: monospace; }
+
+  /* SKILLS preview */
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .skill-cat { }
+  .skill-cat-title { font-size: 10px; color: #22c55e; font-family: monospace; letter-spacing: 2px; margin-bottom: 8px; }
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+  .skill-pill { background: #1e1e1e; border: 1px solid #2a2a2a; color: #aaa; padding: 3px 8px; border-radius: 4px; font-size: 10px; }
+
+  /* EXPERIENCE preview */
+  .exp-item { display: flex; gap: 14px; }
+  .exp-line { width: 1px; background: linear-gradient(to bottom, #22c55e, transparent); margin: 4px 0; flex-shrink: 0; }
+  .exp-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; margin-top: 3px; flex-shrink: 0; }
+  .exp-content h4 { color: #ddd; font-size: 12px; margin-bottom: 2px; }
+  .exp-content span { color: #22c55e; font-size: 10px; font-family: monospace; }
+  .exp-content p { color: #666; font-size: 11px; margin-top: 4px; }
+
+  /* CONTACT preview */
+  .contact-links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .contact-link { display: flex; align-items: center; gap: 6px; background: #1a1a1a; border: 1px solid #2a2a2a; padding: 8px 14px; border-radius: 6px; color: #aaa; font-size: 11px; }
+  .contact-link:hover { border-color: #22c55e; color: #22c55e; }
+  .contact-link .icon { color: #22c55e; font-size: 14px; }
+
+  /* Feature tags */
+  .feature-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .feature-tag { background: #1a1a1a; border: 1px solid #252525; color: #555; padding: 3px 10px; border-radius: 20px; font-size: 10px; }
+  .feature-tag.active { border-color: rgba(34,197,94,0.3); color: #22c55e; background: rgba(34,197,94,0.05); }
+</style>
+</head>
+<body>
+
+<div class="page-title">DISEÑO COMPLETO — <span>Portfolio Enrique Such Andreu</span> — Dark + Verde · Astro + Tailwind + AOS</div>
+
+<!-- SECTION 1: HERO -->
+<div class="section-block">
+  <div class="section-num">// 01</div>
+  <div class="section-name">Hero</div>
+  <div class="section-desc">Pantalla completa. Blobs verdes animados en el fondo, partículas flotantes. Typewriter que rota entre tus roles. Dos CTAs: "Ver proyectos" y "Contacto".</div>
+  <div class="feature-tags" style="margin-bottom:12px;">
+    <span class="feature-tag active">Typewriter effect</span>
+    <span class="feature-tag active">Blobs animados</span>
+    <span class="feature-tag active">Partículas</span>
+    <span class="feature-tag active">ES / EN toggle</span>
+  </div>
+  <div class="section-preview-mini">
+    <div class="nav-mini">
+      <span class="logo">Enrique Such Andreu</span>
+      <span class="links"><span>Sobre mí</span><span>Proyectos</span><span>Habilidades</span><span>Contacto</span><span class="toggle">ES / EN</span></span>
+    </div>
+    <div class="hero-mini">
+      <div class="hero-mini-blob"></div>
+      <div class="hero-mini-text">
+        <p>// Hola, soy</p>
+        <h2>Enrique Such Andreu</h2>
+        <span style="color:#22c55e; font-family:monospace; font-size:12px;">Tecnología Digital & Multimedia|</span>
+        <div style="color:#666; font-size:11px; margin-top:6px; max-width:400px;">Perfil creativo–técnico. UPV + Máster en IA (Universidad de Bolonia, Erasmus).</div>
+        <div class="hero-mini-btns">
+          <span class="mini-btn-a">Ver proyectos</span>
+          <span class="mini-btn-b">Contacto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: SOBRE MÍ -->
+<div class="section-block">
+  <div class="section-num">// 02</div>
+  <div class="section-name">Sobre mí</div>
+  <div class="section-desc">Foto, bio, formación (UPV + Bolonia Erasmus) e idiomas. Fade-in al llegar con scroll.</div>
+  <div class="feature-tags" style="margin-bottom:12px;">
+    <span class="feature-tag active">AOS fade-in</span>
+    <span class="feature-tag active">Foto</span>
+    <span class="feature-tag active">Educación integrada</span>
+    <span class="feature-tag active">Idiomas</span>
+  </div>
+  <div class="section-preview-mini">
+    <div class="about-mini">
+      <div class="about-photo">👤</div>
+      <div class="about-content">
+        <h3>Enrique Such Andreu</h3>
+        <p>Perfil creativo–técnico con especial interés en diseño digital, multimedia, animación 2D/3D, audio y proyectos interactivos.</p>
+        <div class="edu-tags">
+          <span class="edu-tag">🎓 Tec. Digital & Multimedia — UPV</span>
+          <span class="edu-tag">🤖 Máster IA — Bolonia (Erasmus)</span>
+        </div>
+        <div class="lang-dots">
+          <span class="lang-dot"><span>ES</span> Nativo</span>
+          <span class="lang-dot"><span>VA</span> C1</span>
+          <span class="lang-dot"><span>EN</span> B2</span>
+          <span class="lang-dot"><span>IT</span> Básico</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: PROYECTOS -->
+<div class="section-block">
+  <div class="section-num">// 03</div>
+  <div class="section-name">Proyectos destacados</div>
+  <div class="section-desc">Grid de tarjetas. Cada proyecto tiene imagen/emoji, nombre, descripción corta y tags de tecnología. Hover: borde verde + elevación. AOS stagger (aparecen una a una).</div>
+  <div class="feature-tags" style="margin-bottom:12px;">
+    <span class="feature-tag active">AOS stagger</span>
+    <span class="feature-tag active">Hover effect</span>
+    <span class="feature-tag active">Filtro por categoría</span>
+    <span class="feature-tag">Modal / detalle</span>
+  </div>
+  <div class="section-preview-mini">
+    <div class="project-grid-mini">
+      <div class="proj-card"><div class="proj-emoji">🚦</div><div class="proj-name">Detección señales tráfico</div><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">YOLOv8</span><span class="proj-tag">OpenCV</span></div></div>
+      <div class="proj-card"><div class="proj-emoji">👁️</div><div class="proj-name">Reconocimiento facial</div><div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Deep Learning</span></div></div>
+      <div class="proj-card"><div class="proj-emoji">🎮</div><div class="proj-name">Juegos por voz</div><div class="proj-tags"><span class="proj-tag">Java</span><span class="proj-tag">Audio DSP</span></div></div>
+      <div class="proj-card"><div class="proj-emoji">🎭</div><div class="proj-name">Animación 3D Cowboy</div><div class="proj-tags"><span class="proj-tag">Blender</span><span class="proj-tag">GIMP</span></div></div>
+      <div class="proj-card"><div class="proj-emoji">🥽</div><div class="proj-name">VR con Unity</div><div class="proj-tags"><span class="proj-tag">Unity</span><span class="proj-tag">C#</span></div></div>
+      <div class="proj-card"><div class="proj-emoji">🌿</div><div class="proj-name">EcoClothes — Web</div><div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JS</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: HABILIDADES -->
+<div class="section-block">
+  <div class="section-num">// 04</div>
+  <div class="section-name">Habilidades y herramientas</div>
+  <div class="section-desc">Organizado en tres categorías: Lenguajes, Herramientas creativas y Herramientas técnicas. Pills con hover verde.</div>
+  <div class="feature-tags" style="margin-bottom:12px;">
+    <span class="feature-tag active">3 categorías</span>
+    <span class="feature-tag active">AOS fade-in</span>
+    <span class="feature-tag active">Hover pills</span>
+  </div>
+  <div class="section-preview-mini">
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <div class="skill-cat-title">// LENGUAJES</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span><span class="skill-pill">JavaScript</span><span class="skill-pill">HTML/CSS</span><span class="skill-pill">Java</span><span class="skill-pill">C++</span><span class="skill-pill">SQL</span><span class="skill-pill">C#</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">// CREATIVAS</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Blender</span><span class="skill-pill">GIMP</span><span class="skill-pill">Unity 3D</span><span class="skill-pill">OBS Studio</span><span class="skill-pill">OpenSCAD</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">// TÉCNICAS</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Git/GitHub</span><span class="skill-pill">Arduino</span><span class="skill-pill">VS Code</span><span class="skill-pill">MS Project</span><span class="skill-pill">YOLOv8</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: EXPERIENCIA -->
+<div class="section-block">
+  <div class="section-num">// 05</div>
+  <div class="section-name">Experiencia & Actividades</div>
+  <div class="section-desc">Línea de tiempo vertical con borde verde. Una entrada por ahora, escalable para añadir prácticas o trabajos futuros.</div>
+  <div class="feature-tags" style="margin-bottom:12px;">
+    <span class="feature-tag active">Timeline vertical</span>
+    <span class="feature-tag active">AOS slide-in</span>
+    <span class="feature-tag active">Escalable</span>
+  </div>
+  <div class="section-preview-mini">
+    <div class="exp-item">
+      <div style="display:flex; flex-direction:column; align-items:center; margin-right:4px;">
+        <div class="exp-dot"></div>
+        <div class="exp-line" style="height:50px;"></div>
+      </div>
+      <div class="exp-content">
+        <h4>Grupo Generación Espontánea – Toma Uno</h4>
+        <span>UPV · 2022 – presente</span>
+        <p>Trabajo en equipo multidisciplinar en proyectos creativos y tecnológicos. Organización de eventos creativos en el entorno universitario.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: CONTACTO -->
+<div class="section-block">
+  <div class="section-num">// 06</div>
+  <div class="section-name">Contacto</div>
+  <div class="section-desc">Email, LinkedIn y GitHub. Frase de cierre. Fondo con blob verde difuso para cerrar el portfolio con energía.</div>
+  <div class="feature-tags" style="margin-bottom:12px;">
+    <span class="feature-tag active">Email</span>
+    <span class="feature-tag active">LinkedIn</span>
+    <span class="feature-tag active">GitHub</span>
+    <span class="feature-tag active">Blob verde fondo</span>
+  </div>
+  <div class="section-preview-mini">
+    <div style="margin-bottom:12px; color:#666; font-size:12px;">¿Tienes un proyecto en mente o quieres ponerte en contacto? Escríbeme.</div>
+    <div class="contact-links">
+      <div class="contact-link"><span class="icon">✉️</span> enrique@email.com</div>
+      <div class="contact-link"><span class="icon">💼</span> LinkedIn</div>
+      <div class="contact-link"><span class="icon">🐙</span> GitHub</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center; padding:24px; font-size:11px; color:#333; letter-spacing:2px;">
+  FIN DEL LAYOUT — ¿Todo correcto? Confirma en el terminal para pasar al spec
+</div>
+
+</body>
+</html>

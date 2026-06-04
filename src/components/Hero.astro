@@ -1,0 +1,141 @@
+---
+// Hero section — dot grid, asymmetric layout, typewriter, profile photo
+---
+
+<section id="hero" class="dot-grid relative overflow-hidden" style="min-height:100vh;display:flex;align-items:center;">
+
+  <!-- Radial vignette -->
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, #0b0b0b 100%);" aria-hidden="true"></div>
+
+  <!-- Accent glow top-right -->
+  <div class="absolute pointer-events-none" style="top:-10%;right:-5%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(32,198,90,0.06) 0%, transparent 70%);" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full mx-auto px-8" style="max-width:1100px;padding-top:120px;padding-bottom:80px;">
+    <div class="hero-grid">
+
+      <!-- Left -->
+      <div>
+        <p class="reveal font-mono text-accent uppercase" style="font-size:12px;letter-spacing:0.25em;margin-bottom:20px;" data-i18n="hero.greeting">// Hola, soy</p>
+
+        <h1 class="reveal reveal-delay-1 text-text font-black" style="font-size:clamp(52px,7vw,96px);letter-spacing:-0.03em;line-height:0.95;margin-bottom:24px;">
+          Enrique<br />
+          <span style="color:#111111;">Such</span><br />
+          Andreu
+        </h1>
+
+        <div class="reveal reveal-delay-2 flex items-center gap-2" style="margin-bottom:20px;height:24px;">
+          <span class="font-mono text-muted" style="font-size:14px;">→</span>
+          <span id="typewriter" class="tw-cursor-wrap font-mono text-accent" style="font-size:clamp(14px,1.5vw,17px);"></span>
+          <span class="tw-cursor font-mono text-accent" style="font-size:17px;" aria-hidden="true">|</span>
+        </div>
+
+        <p class="reveal reveal-delay-3 text-muted" style="max-width:520px;font-size:15px;line-height:1.7;margin-bottom:36px;" data-i18n="hero.bio">
+          Perfil creativo–técnico. Grado en Tecnología Digital y Multimedia (UPV) + Máster en IA (Università di Bologna, Erasmus). Me apasiona la intersección entre tecnología, creatividad y experiencia de usuario.
+        </p>
+
+        <div class="reveal reveal-delay-4 flex flex-wrap gap-3">
+          <a href="#projects" class="hero-btn-primary font-bold" style="font-size:13px;" data-i18n="hero.cta_primary">Ver proyectos</a>
+          <a href="#contact" class="hero-btn-secondary font-medium" style="font-size:13px;" data-i18n="hero.cta_secondary">Contacto</a>
+        </div>
+      </div>
+
+      <!-- Right — profile photo -->
+      <div class="reveal reveal-delay-2 desktop-only flex-shrink-0">
+        <div class="profile-ring">
+          <div style="width:200px;height:200px;border-radius:50%;overflow:hidden;background:#161616;border:1px solid #242424;display:flex;align-items:center;justify-content:center;position:relative;">
+            <img
+              src="/img/profile.jpeg"
+              alt="Enrique Such Andreu"
+              style="width:100%;height:100%;object-fit:cover;"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <div style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:6px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a5a5a" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute flex flex-col items-center gap-2" style="bottom:36px;left:50%;transform:translateX(-50%);">
+    <div class="scroll-line" style="width:1px;height:40px;background:#20c65a;border-radius:99px;"></div>
+    <span class="font-mono text-muted" style="font-size:9px;letter-spacing:0.3em;">SCROLL</span>
+  </div>
+
+</section>
+
+<style>
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .desktop-only { display: none !important; }
+  }
+
+  .hero-btn-primary {
+    background: #20c65a;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  .hero-btn-primary:hover { background: #4ade80; transform: translateY(-1px); }
+
+  .hero-btn-secondary {
+    border: 1px solid #2e2e2e;
+    color: #5a5a5a;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  .hero-btn-secondary:hover { border-color: #20c65a; color: #20c65a; transform: translateY(-1px); }
+</style>
+
+<script>
+  // ─── Typewriter ────────────────────────────────────────────────────────────
+  let roles: string[] = ['Tecnología Digital & Multimedia', 'Inteligencia Artificial', 'Diseño 2D/3D & Animación', 'Proyectos Interactivos'];
+  let roleIdx = 0;
+  let charIdx = 0;
+  let deleting = false;
+  const tw = document.getElementById('typewriter')!;
+
+  function tick() {
+    const current = roles[roleIdx];
+    if (!deleting) {
+      tw.textContent = current.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx === current.length) { deleting = true; setTimeout(tick, 1800); return; }
+      setTimeout(tick, 55);
+    } else {
+      tw.textContent = current.slice(0, charIdx - 1);
+      charIdx--;
+      if (charIdx === 0) {
+        deleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        setTimeout(tick, 300);
+        return;
+      }
+      setTimeout(tick, 30);
+    }
+  }
+
+  window.addEventListener('langchange', (e: Event) => {
+    const detail = (e as CustomEvent).detail;
+    const newRoles = detail.translations?.hero?.roles;
+    if (Array.isArray(newRoles)) { roles = newRoles; roleIdx = 0; charIdx = 0; deleting = false; }
+  });
+
+  setTimeout(tick, 800);
+</script>

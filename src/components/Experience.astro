@@ -1,0 +1,66 @@
+---
+import esData from '../i18n/es.json';
+const items = esData.experience.items;
+---
+
+<section id="experience" style="padding:100px 0;background:#111111;">
+  <div style="max-width:720px;margin:0 auto;padding:0 32px;">
+
+    <!-- Section title -->
+    <div class="reveal" style="margin-bottom:56px;">
+      <p class="font-mono text-accent uppercase" style="font-size:11px;letter-spacing:0.2em;margin-bottom:10px;">// 04</p>
+      <h2 class="text-text font-extrabold" style="font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.02em;line-height:1.1;" data-i18n="experience.title">Experiencia &amp; Actividades</h2>
+      <div class="section-bar"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div style="position:relative;padding-left:36px;">
+      <div class="timeline-line"></div>
+      <div id="experience-timeline" style="display:flex;flex-direction:column;gap:32px;">
+        {items.map((item, i) => (
+          <div class={`reveal reveal-delay-${i + 1} experience-item`} data-item-index={i} style="position:relative;">
+            <!-- Dot -->
+            <div style="position:absolute;left:-44px;top:18px;width:16px;height:16px;border-radius:50%;background:#111111;border:2px solid #20c65a;display:flex;align-items:center;justify-content:center;">
+              <div style="width:5px;height:5px;border-radius:50%;background:#20c65a;"></div>
+            </div>
+            <!-- Card -->
+            <div style="background:#161616;border:1px solid #242424;border-radius:12px;padding:24px;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+                <div>
+                  <h3 class="text-text font-bold item-org" style="font-size:16px;margin-bottom:4px;">{item.org}</h3>
+                  <p class="font-mono text-accent item-role" style="font-size:12px;">{item.role}</p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;">
+                  <span class="font-mono text-muted item-period" style="font-size:11px;background:#1c1c1c;border:1px solid #242424;padding:4px 10px;border-radius:99px;">{item.period}</span>
+                  <span class="font-mono item-type" style="font-size:10px;color:#3a3a3a;">{item.type}</span>
+                </div>
+              </div>
+              <p class="text-muted item-description" style="font-size:13px;line-height:1.7;">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  window.addEventListener('langchange', (e: Event) => {
+    const { translations } = (e as CustomEvent).detail;
+    const items = translations?.experience?.items;
+    if (!Array.isArray(items)) return;
+    items.forEach((item: { org: string; role: string; period: string; type?: string; description: string }, i: number) => {
+      const el = document.querySelector(`[data-item-index="${i}"]`);
+      if (!el) return;
+      const orgEl = el.querySelector('.item-org');
+      const roleEl = el.querySelector('.item-role');
+      const periodEl = el.querySelector('.item-period');
+      const descEl = el.querySelector('.item-description');
+      if (orgEl) orgEl.textContent = item.org;
+      if (roleEl) roleEl.textContent = item.role;
+      if (periodEl) periodEl.textContent = item.period;
+      if (descEl) descEl.textContent = item.description;
+    });
+  });
+</script>

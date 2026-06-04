@@ -1,0 +1,159 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+}
+
+const { title = 'Enrique Such Andreu — Portfolio' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio personal de Enrique Such Andreu — Tecnología Digital, IA y Diseño" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body class="bg-bg text-text font-sans">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-[1100px] mx-auto px-8 py-5 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#hero" class="font-mono text-sm font-bold tracking-wide" style="color:#20c65a;text-decoration:none;">
+          ESA<span style="color:#5a5a5a;font-weight:400">.dev</span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#projects"   class="nav-link flex items-center" style="font-size:13px;color:#5a5a5a;text-decoration:none;transition:color 0.2s;" data-i18n="nav.projects">Proyectos<span class="nav-dot"></span></a>
+          <a href="#about"      class="nav-link flex items-center" style="font-size:13px;color:#5a5a5a;text-decoration:none;transition:color 0.2s;" data-i18n="nav.about">Sobre mí<span class="nav-dot"></span></a>
+          <a href="#skills"     class="nav-link flex items-center" style="font-size:13px;color:#5a5a5a;text-decoration:none;transition:color 0.2s;" data-i18n="nav.skills">Skills<span class="nav-dot"></span></a>
+          <a href="#experience" class="nav-link flex items-center" style="font-size:13px;color:#5a5a5a;text-decoration:none;transition:color 0.2s;" data-i18n="nav.experience">Experiencia<span class="nav-dot"></span></a>
+          <a href="#contact"    class="nav-link flex items-center" style="font-size:13px;color:#5a5a5a;text-decoration:none;transition:color 0.2s;" data-i18n="nav.contact">Contacto<span class="nav-dot"></span></a>
+
+          <!-- Toggle ES / EN -->
+          <button id="lang-toggle" class="lang-toggle font-mono text-xs border border-border2 px-3 py-1.5 rounded text-muted bg-transparent cursor-pointer transition-all hover:border-accent hover:text-accent" style="letter-spacing:0.05em;">
+            ES / EN
+          </button>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden text-muted hover:text-accent transition-colors" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-border px-8 pb-4 pt-4 flex flex-col gap-4" style="background:#0b0b0b;">
+        <a href="#projects"   class="nav-link text-muted text-sm" data-i18n="nav.projects">Proyectos</a>
+        <a href="#about"      class="nav-link text-muted text-sm" data-i18n="nav.about">Sobre mí</a>
+        <a href="#skills"     class="nav-link text-muted text-sm" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" class="nav-link text-muted text-sm" data-i18n="nav.experience">Experiencia</a>
+        <a href="#contact"    class="nav-link text-muted text-sm" data-i18n="nav.contact">Contacto</a>
+        <button id="lang-toggle-mobile" class="lang-toggle font-mono text-xs border border-border2 px-3 py-1.5 rounded text-muted bg-transparent cursor-pointer w-fit transition-all hover:border-accent hover:text-accent">
+          ES / EN
+        </button>
+      </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <slot />
+
+    <script>
+      // ─── i18n ───────────────────────────────────────────────────────────────
+      let translations: Record<string, any> = {};
+      let currentLang = localStorage.getItem('lang') || 'es';
+
+      async function loadTranslations(lang: string) {
+        const res = await fetch(`/i18n/${lang}.json`);
+        translations = await res.json();
+      }
+
+      function t(key: string): string {
+        const keys = key.split('.');
+        let val: any = translations;
+        for (const k of keys) val = val?.[k];
+        return typeof val === 'string' ? val : key;
+      }
+
+      function applyTranslations() {
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n')!;
+          el.textContent = t(key);
+        });
+        document.documentElement.lang = currentLang;
+      }
+
+      async function setLang(lang: string) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        await loadTranslations(lang);
+        applyTranslations();
+        window.dispatchEvent(new CustomEvent('langchange', { detail: { lang, translations } }));
+      }
+
+      (async () => {
+        await loadTranslations(currentLang);
+        applyTranslations();
+        window.dispatchEvent(new CustomEvent('langchange', { detail: { lang: currentLang, translations } }));
+      })();
+
+      document.getElementById('lang-toggle')?.addEventListener('click', () => setLang(currentLang === 'es' ? 'en' : 'es'));
+      document.getElementById('lang-toggle-mobile')?.addEventListener('click', () => setLang(currentLang === 'es' ? 'en' : 'es'));
+
+      // ─── Navbar scroll ───────────────────────────────────────────────────────
+      const navbar = document.getElementById('navbar')!;
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+      }, { passive: true });
+
+      // ─── Nav active state ────────────────────────────────────────────────────
+      const sections = ['hero', 'projects', 'about', 'skills', 'experience', 'contact'];
+      const navLinks = document.querySelectorAll('.nav-link');
+      function updateActive() {
+        let current = '';
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 200) current = id;
+        });
+        navLinks.forEach((link) => {
+          const href = link.getAttribute('href')?.replace('#', '');
+          link.classList.toggle('active', href === current);
+        });
+      }
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+
+      // ─── Reveal on scroll ────────────────────────────────────────────────────
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      // ─── Mobile menu ─────────────────────────────────────────────────────────
+      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+        document.getElementById('mobile-menu')!.classList.toggle('hidden');
+      });
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => document.getElementById('mobile-menu')!.classList.add('hidden'));
+      });
+    </script>
+
+    <style>
+      #navbar.scrolled {
+        background: rgba(11, 11, 11, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid #242424;
+      }
+    </style>
+
+  </body>
+</html>

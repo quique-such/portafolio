@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; font-family: 'Segoe UI', system-ui, sans-serif; color: #e5e5e5; }
+
+  /* TOP BAR */
+  .info-bar {
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 8px 20px;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .info-bar span { color: #22c55e; }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 48px;
+    background: rgba(17,17,17,0.95);
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .nav-logo {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 15px;
+    color: #22c55e;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    list-style: none;
+    font-size: 13px;
+    color: #aaa;
+  }
+  .nav-links li:hover { color: #fff; cursor: pointer; }
+  .lang-toggle {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: #22c55e;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Animated gradient blob */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    animation: float 8s ease-in-out infinite;
+  }
+  .blob-1 { width: 500px; height: 500px; background: #22c55e; top: -100px; right: -100px; animation-delay: 0s; }
+  .blob-2 { width: 350px; height: 350px; background: #16a34a; bottom: -50px; right: 200px; animation-delay: 3s; }
+  .blob-3 { width: 250px; height: 250px; background: #4ade80; top: 200px; right: 400px; animation-delay: 5s; }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -20px) scale(1.05); }
+  }
+
+  /* Particles simulation */
+  .particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #22c55e;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: rise linear infinite;
+  }
+  @keyframes rise {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 0.4; }
+    90% { opacity: 0.2; }
+    100% { transform: translateY(-20px) translateX(30px); opacity: 0; }
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 680px; }
+  .hero-tag {
+    font-family: monospace;
+    font-size: 13px;
+    color: #22c55e;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+  .hero-name {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+  .typewriter-line {
+    font-size: clamp(16px, 2.5vw, 22px);
+    color: #22c55e;
+    font-weight: 500;
+    margin-bottom: 24px;
+    min-height: 32px;
+    font-family: monospace;
+  }
+  .cursor { animation: blink 1s step-end infinite; }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  .hero-bio {
+    font-size: 15px;
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: #22c55e;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #16a34a; }
+  .btn-secondary {
+    background: transparent;
+    color: #ccc;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #444;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: #22c55e; color: #22c55e; }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 2px;
+  }
+  .scroll-arrow {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, #22c55e, transparent);
+    animation: pulse-arrow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-arrow {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* SECTION PREVIEW */
+  .section-preview {
+    background: #0e0e0e;
+    padding: 48px;
+    border-top: 1px solid #1e1e1e;
+  }
+  .section-label {
+    font-family: monospace;
+    font-size: 11px;
+    color: #22c55e;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .project-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .project-card:hover { border-color: #22c55e; transform: translateY(-3px); }
+  .project-icon {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .project-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e5e5;
+    margin-bottom: 6px;
+  }
+  .project-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: rgba(249,115,22,0.1);
+    color: #22c55e;
+    border: 1px solid rgba(249,115,22,0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: monospace;
+  }
+
+  /* ANNOTATION */
+  .annotation {
+    background: rgba(249,115,22,0.08);
+    border: 1px solid rgba(249,115,22,0.25);
+    border-left: 3px solid #22c55e;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin: 24px 0;
+    font-size: 12px;
+    color: #bbb;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="info-bar">MOCKUP — Portfolio de Enrique Such Andreu &nbsp;|&nbsp; <span>Diseño Dark + Naranja / Visual & Dinámico</span></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Enrique Such Andreu</div>
+  <ul class="nav-links">
+    <li>Sobre mí</li>
+    <li>Proyectos</li>
+    <li>Habilidades</li>
+    <li>Contacto</li>
+    <li><span class="lang-toggle">ES / EN</span></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">// Hola, soy</div>
+    <h1 class="hero-name">Enrique<br>Such Andreu</h1>
+    <div class="typewriter-line" id="typewriter">Tecnología Digital & Multimedia<span class="cursor">|</span></div>
+    <p class="hero-bio">
+      Perfil creativo–técnico. Grado en Tecnología Digital y Multimedia (UPV) + Máster en IA (Universidad de Bolonia, Erasmus). Me apasiona la intersección entre tecnología, creatividad y experiencia de usuario.
+    </p>
+    <div class="hero-ctas">
+      <button class="btn-primary">Ver proyectos</button>
+      <button class="btn-secondary">Contacto</button>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</div>
+
+<div class="annotation">
+  El efecto typewriter rotará entre: "Tecnología Digital & Multimedia" · "Inteligencia Artificial" · "Diseño 2D/3D & Animación" · "Proyectos Interactivos"
+</div>
+
+<!-- PROJECTS PREVIEW -->
+<div class="section-preview">
+  <div class="section-label">// 04</div>
+  <div class="section-title">Proyectos destacados</div>
+
+  <div class="annotation">Vista previa de cómo lucirían las tarjetas de proyectos (con AOS fade-in al hacer scroll)</div>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-icon">🚦</div>
+      <div class="project-name">Detección de señales de tráfico</div>
+      <div class="project-desc">Visión artificial en tiempo real para clasificación de señales en conducción autónoma simulada.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span></div>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">🎭</div>
+      <div class="project-name">Animación 3D — Cowboy</div>
+      <div class="project-desc">Personajes texturizados y escenas completas. Creación de personajes, modelado y render en Blender.</div>
+      <div class="tags"><span class="tag">Blender</span><span class="tag">GIMP</span></div>
+    </div>
+    <div class="project-card">
+      <div class="project-icon">🎮</div>
+      <div class="project-name">Juegos controlados por voz</div>
+      <div class="project-desc">Suite de 4 minijuegos que responden a tono, volumen y frecuencia. UI centrada en accesibilidad auditiva.</div>
+      <div class="tags"><span class="tag">Java</span><span class="tag">Audio DSP</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Particles
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (6 + Math.random() * 10) + 's';
+    p.style.animationDelay = (Math.random() * 8) + 's';
+    p.style.width = p.style.height = (1 + Math.random() * 2) + 'px';
+    container.appendChild(p);
+  }
+
+  // Typewriter
+  const roles = ['Tecnología Digital & Multimedia', 'Inteligencia Artificial', 'Diseño 2D/3D & Animación', 'Proyectos Interactivos'];
+  let ri = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typewriter');
+  function type() {
+    const role = roles[ri];
+    if (!deleting) {
+      ci++;
+      el.innerHTML = role.slice(0, ci) + '<span class="cursor">|</span>';
+      if (ci === role.length) { deleting = true; setTimeout(type, 1800); return; }
+      setTimeout(type, 65);
+    } else {
+      ci--;
+      el.innerHTML = role.slice(0, ci) + '<span class="cursor">|</span>';
+      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(type, 400); return; }
+      setTimeout(type, 35);
+    }
+  }
+  type();
+</script>
+</body>
+</html>

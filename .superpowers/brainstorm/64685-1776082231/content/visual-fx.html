@@ -1,0 +1,45 @@
+<h2>¿Qué nivel de efectos visuales quieres?</h2>
+<p class="subtitle">Desde elegante y sutil hasta expresivo y llamativo</p>
+
+<div class="options">
+  <div class="option" data-choice="subtle" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Sutil y elegante</h3>
+      <p>Transiciones suaves al hacer scroll, fade-in de secciones, hover en tarjetas de proyectos. Rápido, sin distracciones. El contenido manda.</p>
+      <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span class="label">Fade-in al scroll</span>
+        <span class="label">Hover en tarjetas</span>
+        <span class="label">Transiciones CSS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="medium" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Visual y dinámico <em style="font-style:normal; opacity:0.6">— recomendado</em></h3>
+      <p>Animaciones de entrada por sección, efecto de escritura en el Hero (typewriter), gradientes animados, partículas o fondo con movimiento sutil. Llama la atención sin saturar.</p>
+      <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span class="label">Typewriter effect</span>
+        <span class="label">Scroll animations</span>
+        <span class="label">Gradiente animado</span>
+        <span class="label">Partículas sutiles</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="expressive" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Expresivo y experimental</h3>
+      <p>Cursor personalizado, parallax, efectos 3D en tarjetas, fondo con WebGL o canvas interactivo. Muy impactante, pero más pesado y de mayor mantenimiento.</p>
+      <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span class="label">Cursor custom</span>
+        <span class="label">3D card tilt</span>
+        <span class="label">WebGL / Canvas</span>
+        <span class="label">Parallax</span>
+      </div>
+    </div>
+  </div>
+</div>

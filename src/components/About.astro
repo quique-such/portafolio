@@ -1,0 +1,125 @@
+---
+// About section — two-column, large photo right, education + languages left
+---
+
+<section id="about" style="padding:100px 0;background:#111111;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+    <div class="about-grid">
+
+      <!-- Left -->
+      <div class="reveal">
+        <!-- Section title -->
+        <div style="margin-bottom:56px;">
+          <p class="font-mono text-accent uppercase" style="font-size:11px;letter-spacing:0.2em;margin-bottom:10px;">// 02</p>
+          <h2 class="text-text font-extrabold" style="font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.02em;line-height:1.1;" data-i18n="about.title">Sobre mí</h2>
+          <div class="section-bar"></div>
+        </div>
+
+        <p class="text-muted" style="font-size:15px;line-height:1.8;margin-bottom:32px;" data-i18n="about.bio">
+          Soy Enrique Such Andreu, estudiante de Tecnología Digital y Multimedia en la UPV con un Máster en Inteligencia Artificial cursado en la Universidad de Bolonia (Erasmus). Me muevo entre el mundo técnico y el creativo: programación, visión artificial, animación 3D, realidad virtual y diseño web. Busco proyectos que combinen tecnología y experiencia de usuario de forma innovadora.
+        </p>
+
+        <!-- Education -->
+        <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.education_label">Formación</p>
+        <div id="about-education" style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
+          <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
+            <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;">Grado en Tecnología Digital y Multimedia</p>
+            <p class="font-mono text-muted" style="font-size:12px;">Universitat Politècnica de València</p>
+          </div>
+          <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
+            <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;">Máster en Inteligencia Artificial</p>
+            <p class="font-mono text-muted" style="font-size:12px;">Università di Bologna — Erasmus</p>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.languages_label">Idiomas</p>
+        <div id="about-languages" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
+            <span class="text-text font-medium" style="font-size:13px;">Español</span>
+            <span class="font-mono text-accent" style="font-size:11px;">Nativo</span>
+          </div>
+          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
+            <span class="text-text font-medium" style="font-size:13px;">Valenciano</span>
+            <span class="font-mono text-accent" style="font-size:11px;">Nativo</span>
+          </div>
+          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
+            <span class="text-text font-medium" style="font-size:13px;">Inglés</span>
+            <span class="font-mono text-accent" style="font-size:11px;">B2</span>
+          </div>
+          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
+            <span class="text-text font-medium" style="font-size:13px;">Italiano</span>
+            <span class="font-mono text-accent" style="font-size:11px;">Básico</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — large photo 3:4 -->
+      <div class="reveal reveal-delay-2 flex items-start justify-center">
+        <div style="width:100%;max-width:380px;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:#161616;border:1px solid #242424;position:relative;">
+          <img
+            src="/img/profile.jpeg"
+            alt="Enrique Such Andreu"
+            style="width:100%;height:100%;object-fit:cover;"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <!-- Fallback -->
+          <div style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;background:repeating-linear-gradient(45deg,#161616 0,#161616 10px,#1c1c1c 10px,#1c1c1c 20px);">
+            <span class="font-mono text-muted" style="font-size:11px;">foto de perfil</span>
+          </div>
+          <!-- Overlay label -->
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(11,11,11,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;border:1px solid #242424;">
+            <p class="text-text font-bold" style="font-size:13px;">Enrique Such Andreu</p>
+            <p class="font-mono text-accent" style="font-size:11px;">Digital & AI · UPV × Bologna</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener('langchange', (e: Event) => {
+    const { translations } = (e as CustomEvent).detail;
+    const a = translations?.about;
+    if (!a) return;
+
+    // Education
+    const eduEl = document.getElementById('about-education');
+    if (eduEl && Array.isArray(a.education)) {
+      eduEl.innerHTML = a.education.map((item: { title: string; org: string }) =>
+        `<div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
+          <p style="font-size:13px;font-weight:600;color:#e8e8e8;margin-bottom:2px;">${item.title}</p>
+          <p style="font-size:12px;color:#5a5a5a;font-family:'JetBrains Mono',monospace;">${item.org}</p>
+        </div>`
+      ).join('');
+    }
+
+    // Languages
+    const langEl = document.getElementById('about-languages');
+    if (langEl && Array.isArray(a.languages)) {
+      langEl.innerHTML = a.languages.map((l: { name: string; level: string }) =>
+        `<div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
+          <span style="font-size:13px;color:#e8e8e8;font-weight:500;">${l.name}</span>
+          <span style="font-size:11px;color:#20c65a;font-family:'JetBrains Mono',monospace;">${l.level}</span>
+        </div>`
+      ).join('');
+    }
+  });
+</script>

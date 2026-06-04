@@ -1,0 +1,50 @@
+---
+import esData from '../i18n/es.json';
+const categories = esData.skills.categories;
+---
+
+<section id="skills" style="padding:100px 0;background:#0b0b0b;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 32px;">
+
+    <!-- Section title -->
+    <div class="reveal" style="margin-bottom:56px;">
+      <p class="font-mono text-accent uppercase" style="font-size:11px;letter-spacing:0.2em;margin-bottom:10px;">// 03</p>
+      <h2 class="text-text font-extrabold" style="font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.02em;line-height:1.1;" data-i18n="skills.title">Habilidades y herramientas</h2>
+      <div class="section-bar"></div>
+    </div>
+
+    <div id="skills-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;">
+      {categories.map((cat, i) => (
+        <div class={`reveal reveal-delay-${i + 1} skills-category`} data-category-index={i}>
+          <p class="font-mono text-accent uppercase category-label" style="font-size:10px;letter-spacing:0.2em;margin-bottom:20px;">// {cat.label}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;" class="category-pills">
+            {cat.items.map(item => (
+              <span class="skill-pill">{item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 768px) {
+    #skills-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<script>
+  window.addEventListener('langchange', (e: Event) => {
+    const { translations } = (e as CustomEvent).detail;
+    const categories = translations?.skills?.categories;
+    if (!Array.isArray(categories)) return;
+    categories.forEach((cat: { label: string; items: string[] }, i: number) => {
+      const col = document.querySelector(`[data-category-index="${i}"]`);
+      if (!col) return;
+      const labelEl = col.querySelector('.category-label');
+      if (labelEl) labelEl.textContent = `// ${cat.label}`;
+    });
+  });
+</script>

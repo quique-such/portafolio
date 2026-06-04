@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "// Hello, I'm",
+    "name": "Enrique Such Andreu",
+    "roles": [
+      "Digital Technology & Multimedia",
+      "Artificial Intelligence",
+      "2D/3D Design & Animation",
+      "Interactive Projects"
+    ],
+    "bio": "Creative–technical profile. Degree in Digital Technology and Multimedia (UPV) + Master's in AI (Università di Bologna, Erasmus). Passionate about the intersection of technology, creativity, and user experience.",
+    "cta_primary": "View projects",
+    "cta_secondary": "Contact",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "title": "About me",
+    "bio": "I'm Enrique Such Andreu, a Digital Technology and Multimedia student at UPV with a Master's in Artificial Intelligence from the University of Bologna (Erasmus). I move between technical and creative worlds: programming, computer vision, 3D animation, virtual reality, and web design. I look for projects that combine technology and user experience in innovative ways.",
+    "education_label": "Education",
+    "education": [
+      { "title": "Degree in Digital Technology and Multimedia", "org": "Universitat Politècnica de València" },
+      { "title": "Master's in Artificial Intelligence", "org": "Università di Bologna — Erasmus" }
+    ],
+    "languages_label": "Languages",
+    "languages": [
+      { "name": "Spanish", "level": "Native" },
+      { "name": "Valencian", "level": "Native" },
+      { "name": "English", "level": "B2" },
+      { "name": "Italian", "level": "Basic" }
+    ]
+  },
+  "projects": {
+    "title": "Featured projects",
+    "items": [
+      {
+        "id": 1,
+        "name": "Traffic sign detection",
+        "description": "Real-time computer vision for traffic sign classification in simulated autonomous driving",
+        "tags": ["Python", "YOLOv8", "OpenCV"],
+        "github": ""
+      },
+      {
+        "id": 2,
+        "name": "Facial recognition",
+        "description": "Digital image processing scripts and identity validation",
+        "tags": ["Python", "Deep Learning"],
+        "github": ""
+      },
+      {
+        "id": 3,
+        "name": "Jump height calculator",
+        "description": "Application to calculate jump height with user database and comparative rankings",
+        "tags": ["Python", "Matplotlib", "Pandas"],
+        "github": ""
+      },
+      {
+        "id": 4,
+        "name": "Tech company management",
+        "description": "Comprehensive ERP simulation, Gantt charts and cost control",
+        "tags": ["Microsoft Project"],
+        "github": ""
+      },
+      {
+        "id": 5,
+        "name": "EcoClothes — E-commerce",
+        "description": "Design and deployment of a functional e-commerce platform from scratch",
+        "tags": ["HTML5", "CSS", "JavaScript", "Git"],
+        "github": ""
+      },
+      {
+        "id": 6,
+        "name": "Embedded electronics",
+        "description": "Circuit design and logic programming for intelligent portable devices",
+        "tags": ["Arduino", "C++", "M5Stack"],
+        "github": ""
+      },
+      {
+        "id": 7,
+        "name": "Voice-controlled games",
+        "description": "Suite of 4 minigames responding to tone, volume and frequency with accessible UI",
+        "tags": ["Java", "C#", "Audio DSP"],
+        "github": ""
+      },
+      {
+        "id": 8,
+        "name": "3D Animation — Cowboys",
+        "description": "Textured 3D characters, complete scenes and modelling from scratch",
+        "tags": ["Blender", "GIMP"],
+        "github": ""
+      },
+      {
+        "id": 9,
+        "name": "Virtual Reality with Unity",
+        "description": "VR prototypes with movement mechanics and 3D asset integration",
+        "tags": ["Unity 3D", "C#"],
+        "github": ""
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & tools",
+    "categories": [
+      {
+        "label": "Languages",
+        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "C++", "SQL", "C#"]
+      },
+      {
+        "label": "Creative",
+        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD"]
+      },
+      {
+        "label": "Technical",
+        "items": ["Git/GitHub", "Arduino", "VS Code", "YOLOv8", "OpenCV", "Microsoft Project"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience & Activities",
+    "items": [
+      {
+        "org": "Rankia S.L.",
+        "role": "Product & Tech Trainee",
+        "period": "Mar. 2026 – present",
+        "type": "On-site",
+        "description": "Internship at Rankia, the largest Spanish-speaking financial community. Developing skills in a real professional environment within the digital and financial world."
+      },
+      {
+        "org": "Toma UNO UPV",
+        "role": "Collaborator — Generación Espontánea",
+        "period": "Sept. 2023 – Jan. 2024",
+        "type": "University",
+        "description": "Multidisciplinary teamwork on creative and technological projects. Organisation of creative events in the university environment."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "tagline": "Want to get in touch? Write to me.",
+    "email_label": "Email",
+    "email": "quiquesuchandreu@gmail.com",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub",
+    "github_url": "https://github.com/quique-such"
+  }
+}
