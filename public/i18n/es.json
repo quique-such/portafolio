@@ -44,63 +44,72 @@
         "name": "Detección de señales de tráfico",
         "description": "Visión artificial en tiempo real para clasificación de señales en conducción autónoma simulada",
         "tags": ["Python", "YOLOv8", "OpenCV"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-1.jpg"
       },
       {
         "id": 2,
         "name": "Reconocimiento facial",
         "description": "Scripts de procesado digital de imagen y validación de identidad",
         "tags": ["Python", "Deep Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-2.jpg"
       },
       {
         "id": 3,
         "name": "Altura de salto",
         "description": "Aplicación para calcular altura de salto con BBDD de usuarios y rankings comparativos",
         "tags": ["Python", "Matplotlib", "Pandas"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-3.jpg"
       },
       {
         "id": 4,
         "name": "Gestión de empresa tecnológica",
         "description": "Simulación integral de ERP, diagramas de Gantt y control de costes",
         "tags": ["Microsoft Project"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-4.jpg"
       },
       {
         "id": 5,
         "name": "EcoClothes — E-commerce",
         "description": "Diseño y despliegue de plataforma e-commerce funcional desde cero",
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-5.jpg"
       },
       {
         "id": 6,
         "name": "Electrónica embebida",
         "description": "Diseño de circuitos y programación lógica para dispositivos portátiles inteligentes",
         "tags": ["Arduino", "C++", "M5Stack"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-6.jpg"
       },
       {
         "id": 7,
         "name": "Juegos controlados por voz",
         "description": "Suite de 4 minijuegos que responden a tono, volumen y frecuencia con UI accesible",
         "tags": ["Java", "C#", "Audio DSP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-7.jpg"
       },
       {
         "id": 8,
         "name": "Animación 3D — Cowboys",
         "description": "Personajes 3D texturizados, escenas completas y modelado desde cero",
         "tags": ["Blender", "GIMP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-8.jpg"
       },
       {
         "id": 9,
         "name": "Realidad Virtual con Unity",
         "description": "Prototipos de VR con mecánicas de movimiento e integración de assets 3D",
         "tags": ["Unity 3D", "C#"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-9.jpg"
       },
       {
         "id": 10,
@@ -123,7 +132,8 @@
         "name": "App Android — Monitor de depósito",
         "description": "Aplicación Android nativa que monitoriza en tiempo real el estado de un depósito de agua, comunicándose por UDP con un servidor Java. Incluye controles de entrada/salida y visualización de caudales.",
         "tags": ["Kotlin", "Android", "UDP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-12.jpg"
       },
       {
         "id": 13,

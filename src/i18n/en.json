@@ -44,63 +44,72 @@
         "name": "Traffic sign detection",
         "description": "Real-time computer vision for traffic sign classification in simulated autonomous driving",
         "tags": ["Python", "YOLOv8", "OpenCV"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-1.jpg"
       },
       {
         "id": 2,
         "name": "Facial recognition",
         "description": "Digital image processing scripts and identity validation",
         "tags": ["Python", "Deep Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-2.jpg"
       },
       {
         "id": 3,
         "name": "Jump height calculator",
         "description": "Application to calculate jump height with user database and comparative rankings",
         "tags": ["Python", "Matplotlib", "Pandas"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-3.jpg"
       },
       {
         "id": 4,
         "name": "Tech company management",
         "description": "Comprehensive ERP simulation, Gantt charts and cost control",
         "tags": ["Microsoft Project"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-4.jpg"
       },
       {
         "id": 5,
         "name": "EcoClothes — E-commerce",
         "description": "Design and deployment of a functional e-commerce platform from scratch",
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-5.jpg"
       },
       {
         "id": 6,
         "name": "Embedded electronics",
         "description": "Circuit design and logic programming for intelligent portable devices",
         "tags": ["Arduino", "C++", "M5Stack"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-6.jpg"
       },
       {
         "id": 7,
         "name": "Voice-controlled games",
         "description": "Suite of 4 minigames responding to tone, volume and frequency with accessible UI",
         "tags": ["Java", "C#", "Audio DSP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-7.jpg"
       },
       {
         "id": 8,
         "name": "3D Animation — Cowboys",
         "description": "Textured 3D characters, complete scenes and modelling from scratch",
         "tags": ["Blender", "GIMP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-8.jpg"
       },
       {
         "id": 9,
         "name": "Virtual Reality with Unity",
         "description": "VR prototypes with movement mechanics and 3D asset integration",
         "tags": ["Unity 3D", "C#"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-9.jpg"
       },
       {
         "id": 10,
@@ -123,7 +132,8 @@
         "name": "Android app — Water tank monitor",
         "description": "Native Android app that monitors a water tank in real time, communicating over UDP with a Java server. Includes in/out controls and flow visualization.",
         "tags": ["Kotlin", "Android", "UDP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-12.jpg"
       },
       {
         "id": 13,
