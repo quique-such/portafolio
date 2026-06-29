@@ -1,0 +1,186 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "skills": "Skills",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "// Hola, soy",
+    "name": "Enrique Such Andreu",
+    "roles": [
+      "Tecnología Digital & Multimedia",
+      "Inteligencia Artificial",
+      "Diseño 2D/3D & Animación",
+      "Proyectos Interactivos"
+    ],
+    "bio": "Perfil creativo–técnico. Grado en Tecnología Digital y Multimedia (UPV) + Máster en IA (Università di Bologna, Erasmus). Me apasiona la intersección entre tecnología, creatividad y experiencia de usuario.",
+    "cta_primary": "Ver proyectos",
+    "cta_secondary": "Contacto",
+    "scroll": "SCROLL",
+    "cta_cv": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "bio": "Soy Enrique Such Andreu, estudiante de Tecnología Digital y Multimedia en la UPV con un Máster en Inteligencia Artificial cursado en la Universidad de Bolonia (Erasmus). Me muevo entre el mundo técnico y el creativo: programación, visión artificial, animación 3D, realidad virtual y diseño web. Busco proyectos que combinen tecnología y experiencia de usuario de forma innovadora.",
+    "education_label": "Formación",
+    "education": [
+      { "title": "Grado en Tecnología Digital y Multimedia", "org": "Universitat Politècnica de València" },
+      { "title": "Máster en Inteligencia Artificial", "org": "Università di Bologna — Erasmus" }
+    ],
+    "languages_label": "Idiomas",
+    "languages": [
+      { "name": "Español", "level": "Nativo" },
+      { "name": "Valenciano", "level": "Nativo" },
+      { "name": "Inglés", "level": "B2" },
+      { "name": "Italiano", "level": "Básico" }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos destacados",
+    "items": [
+      {
+        "id": 1,
+        "name": "Detección de señales de tráfico",
+        "description": "Visión artificial en tiempo real para clasificación de señales en conducción autónoma simulada",
+        "tags": ["Python", "YOLOv8", "OpenCV"],
+        "github": "",
+        "image": "/img/projects/proj-1.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Altura de salto",
+        "description": "Aplicación para calcular altura de salto con BBDD de usuarios y rankings comparativos",
+        "tags": ["Python", "Matplotlib", "Pandas"],
+        "github": "",
+        "image": "/img/projects/proj-3.jpg"
+      },
+      {
+        "id": 5,
+        "name": "EcoClothes — E-commerce",
+        "description": "Diseño y despliegue de plataforma e-commerce funcional desde cero",
+        "tags": ["HTML5", "CSS", "JavaScript", "Git"],
+        "github": "",
+        "image": "/img/projects/proj-5.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Electrónica embebida",
+        "description": "Diseño de circuitos y programación lógica para dispositivos portátiles inteligentes",
+        "tags": ["Arduino", "C++", "M5Stack"],
+        "github": "",
+        "image": "/img/projects/proj-6.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Juegos controlados por voz",
+        "description": "Suite de 4 minijuegos que responden a tono, volumen y frecuencia con UI accesible",
+        "tags": ["Java", "C#", "Audio DSP"],
+        "github": "",
+        "image": "/img/projects/proj-7.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Animación 3D — Cowboys",
+        "description": "Personajes 3D texturizados, escenas completas y modelado desde cero",
+        "tags": ["Blender", "GIMP"],
+        "github": "",
+        "image": "/img/projects/proj-8.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Realidad Virtual con Unity",
+        "description": "Prototipos de VR con mecánicas de movimiento e integración de assets 3D",
+        "tags": ["Unity 3D", "C#"],
+        "github": "",
+        "image": "/img/projects/proj-9.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Predicción académica con redes bayesianas",
+        "description": "Modelo probabilístico que predice la nota de un examen a partir de hábitos del estudiante (horas de estudio, sueño, asistencia). Compara estructuras expertas frente a estructuras aprendidas de los datos, con inferencia y análisis de sensibilidad.",
+        "tags": ["Python", "pgmpy", "Machine Learning"],
+        "github": "",
+        "image": "/img/projects/proj-10.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Machine Learning desde cero",
+        "description": "Implementación, sin librerías de alto nivel, de los fundamentos del ML: descenso de gradiente, SGD, regresión logística con optimizador Adam y PCA + clustering sobre MNIST. Con métricas, fronteras de decisión y visualizaciones.",
+        "tags": ["Python", "scikit-learn", "Machine Learning"],
+        "github": "",
+        "image": "/img/projects/proj-11.jpg"
+      },
+      {
+        "id": 12,
+        "name": "App Android — Monitor de depósito",
+        "description": "Aplicación Android nativa que monitoriza en tiempo real el estado de un depósito de agua, comunicándose por UDP con un servidor Java. Incluye controles de entrada/salida y visualización de caudales.",
+        "tags": ["Kotlin", "Android", "UDP"],
+        "github": "",
+        "image": "/img/projects/proj-12.jpg"
+      },
+      {
+        "id": 13,
+        "name": "Sistema cliente-servidor cifrado",
+        "description": "Arquitectura distribuida de seguridad con firma digital RSA, cifrado simétrico AES y un servidor de licencias para la distribución segura de contenidos.",
+        "tags": ["Python", "RSA", "AES"],
+        "github": "",
+        "image": "/img/projects/proj-13.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Identidad de marca — Design Book",
+        "description": "Manual completo de identidad visual de una marca: logotipo, paleta de color, tipografía, guías de uso y mockups. Diseño gráfico profesional documentado de principio a fin.",
+        "tags": ["Diseño gráfico", "Branding", "Illustrator"],
+        "github": "",
+        "image": "/img/projects/proj-15.jpg"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades y herramientas",
+    "categories": [
+      {
+        "label": "Lenguajes",
+        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "Kotlin", "C++", "SQL", "C#"]
+      },
+      {
+        "label": "Creativas",
+        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD", "Illustrator"]
+      },
+      {
+        "label": "Técnicas",
+        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia & Actividades",
+    "items": [
+      {
+        "org": "Rankia S.L.",
+        "role": "Trainee de Product & Tech",
+        "period": "mar. 2026 – actualidad",
+        "type": "Presencial",
+        "description": "Contrato de prácticas en Rankia, la mayor comunidad financiera de habla hispana. Desarrollo de habilidades en un entorno profesional real dentro del mundo digital y financiero."
+      },
+      {
+        "org": "Toma UNO UPV",
+        "role": "Colaborador — Generación Espontánea",
+        "period": "sept. 2023 – ene. 2024",
+        "type": "Universitario",
+        "description": "Trabajo en equipo multidisciplinar en proyectos creativos y tecnológicos. Organización de eventos creativos en el entorno universitario."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "tagline": "¿Quieres ponerte en contacto? Escríbeme.",
+    "email_label": "Email",
+    "email": "quiquesuchandreu@gmail.com",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub",
+    "github_url": "https://github.com/quique-such"
+  }
+}
