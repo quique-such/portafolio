@@ -107,14 +107,16 @@
         "name": "Bayesian networks for academic prediction",
         "description": "Probabilistic model that predicts exam scores from student habits (study hours, sleep, attendance). Compares expert-built versus data-learned network structures, with probabilistic inference and sensitivity analysis.",
         "tags": ["Python", "pgmpy", "Machine Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-10.jpg"
       },
       {
         "id": 11,
         "name": "Machine Learning from scratch",
         "description": "From-scratch implementation of ML fundamentals: gradient descent, SGD, logistic regression with the Adam optimizer, and PCA + clustering on MNIST. With metrics, decision boundaries and visualizations.",
         "tags": ["Python", "scikit-learn", "Machine Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-11.jpg"
       },
       {
         "id": 12,
@@ -128,21 +130,24 @@
         "name": "Encrypted client-server system",
         "description": "Distributed security architecture with RSA digital signatures, AES symmetric encryption and a license server for secure content distribution.",
         "tags": ["Python", "RSA", "AES"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-13.jpg"
       },
       {
         "id": 14,
         "name": "Secure password manager",
         "description": "Desktop app with a strong password generator (following NIST guidelines), security validator and file encryption. Built with a GUI and automated tests.",
         "tags": ["Python", "guizero", "pytest"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-14.jpg"
       },
       {
         "id": 15,
         "name": "Brand identity — Design Book",
         "description": "Complete visual identity manual for a brand: logo, colour palette, typography, usage guidelines and mockups. Professional graphic design documented end to end.",
         "tags": ["Graphic Design", "Branding", "Illustrator"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-15.jpg"
       }
     ]
   },

@@ -107,14 +107,16 @@
         "name": "Predicción académica con redes bayesianas",
         "description": "Modelo probabilístico que predice la nota de un examen a partir de hábitos del estudiante (horas de estudio, sueño, asistencia). Compara estructuras expertas frente a estructuras aprendidas de los datos, con inferencia y análisis de sensibilidad.",
         "tags": ["Python", "pgmpy", "Machine Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-10.jpg"
       },
       {
         "id": 11,
         "name": "Machine Learning desde cero",
         "description": "Implementación, sin librerías de alto nivel, de los fundamentos del ML: descenso de gradiente, SGD, regresión logística con optimizador Adam y PCA + clustering sobre MNIST. Con métricas, fronteras de decisión y visualizaciones.",
         "tags": ["Python", "scikit-learn", "Machine Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-11.jpg"
       },
       {
         "id": 12,
@@ -128,21 +130,24 @@
         "name": "Sistema cliente-servidor cifrado",
         "description": "Arquitectura distribuida de seguridad con firma digital RSA, cifrado simétrico AES y un servidor de licencias para la distribución segura de contenidos.",
         "tags": ["Python", "RSA", "AES"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-13.jpg"
       },
       {
         "id": 14,
         "name": "Gestor de contraseñas seguro",
         "description": "Aplicación de escritorio con generador de contraseñas robustas (siguiendo guías NIST), validador de seguridad y cifrado de archivos. Construida con interfaz gráfica y tests automatizados.",
         "tags": ["Python", "guizero", "pytest"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-14.jpg"
       },
       {
         "id": 15,
         "name": "Identidad de marca — Design Book",
         "description": "Manual completo de identidad visual de una marca: logotipo, paleta de color, tipografía, guías de uso y mockups. Diseño gráfico profesional documentado de principio a fin.",
         "tags": ["Diseño gráfico", "Branding", "Illustrator"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-15.jpg"
       }
     ]
   },

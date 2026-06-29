@@ -31,6 +31,16 @@ const projects = esData.projects.items;
           data-project-id={project.id}
           data-tags={JSON.stringify(project.tags)}
         >
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.name}
+              loading="lazy"
+              width="720"
+              height="405"
+              style="width:calc(100% + 56px);margin:-28px -28px 4px;border-radius:12px 12px 0 0;display:block;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid #242424;"
+            />
+          )}
           <div style="display:flex;justify-content:space-between;align-items:flex-start;">
             <span class="project-num font-mono" style="font-size:11px;color:#5a5a5a;letter-spacing:0.1em;">/{String(project.id).padStart(2,'0')}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round">
