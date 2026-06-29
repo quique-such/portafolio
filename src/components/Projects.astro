@@ -25,7 +25,7 @@ const projects = esData.projects.items;
 
     <!-- Grid -->
     <div id="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;">
-      {projects.map((project) => (
+      {projects.map((project, i) => (
         <div
           class="reveal project-card"
           data-project-id={project.id}
@@ -42,7 +42,7 @@ const projects = esData.projects.items;
             />
           )}
           <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-            <span class="project-num font-mono" style="font-size:11px;color:#5a5a5a;letter-spacing:0.1em;">/{String(project.id).padStart(2,'0')}</span>
+            <span class="project-num font-mono" style="font-size:11px;color:#5a5a5a;letter-spacing:0.1em;">/{String(i+1).padStart(2,'0')}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round">
               <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
             </svg>

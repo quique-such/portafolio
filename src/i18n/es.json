@@ -48,28 +48,12 @@
         "image": "/img/projects/proj-1.jpg"
       },
       {
-        "id": 2,
-        "name": "Reconocimiento facial",
-        "description": "Scripts de procesado digital de imagen y validación de identidad",
-        "tags": ["Python", "Deep Learning"],
-        "github": "",
-        "image": "/img/projects/proj-2.jpg"
-      },
-      {
         "id": 3,
         "name": "Altura de salto",
         "description": "Aplicación para calcular altura de salto con BBDD de usuarios y rankings comparativos",
         "tags": ["Python", "Matplotlib", "Pandas"],
         "github": "",
         "image": "/img/projects/proj-3.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Gestión de empresa tecnológica",
-        "description": "Simulación integral de ERP, diagramas de Gantt y control de costes",
-        "tags": ["Microsoft Project"],
-        "github": "",
-        "image": "/img/projects/proj-4.jpg"
       },
       {
         "id": 5,
@@ -142,14 +126,6 @@
         "tags": ["Python", "RSA", "AES"],
         "github": "",
         "image": "/img/projects/proj-13.jpg"
-      },
-      {
-        "id": 14,
-        "name": "Gestor de contraseñas seguro",
-        "description": "Aplicación de escritorio con generador de contraseñas robustas (siguiendo guías NIST), validador de seguridad y cifrado de archivos. Construida con interfaz gráfica y tests automatizados.",
-        "tags": ["Python", "guizero", "pytest"],
-        "github": "",
-        "image": "/img/projects/proj-14.jpg"
       },
       {
         "id": 15,

@@ -48,28 +48,12 @@
         "image": "/img/projects/proj-1.jpg"
       },
       {
-        "id": 2,
-        "name": "Facial recognition",
-        "description": "Digital image processing scripts and identity validation",
-        "tags": ["Python", "Deep Learning"],
-        "github": "",
-        "image": "/img/projects/proj-2.jpg"
-      },
-      {
         "id": 3,
         "name": "Jump height calculator",
         "description": "Application to calculate jump height with user database and comparative rankings",
         "tags": ["Python", "Matplotlib", "Pandas"],
         "github": "",
         "image": "/img/projects/proj-3.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Tech company management",
-        "description": "Comprehensive ERP simulation, Gantt charts and cost control",
-        "tags": ["Microsoft Project"],
-        "github": "",
-        "image": "/img/projects/proj-4.jpg"
       },
       {
         "id": 5,
@@ -142,14 +126,6 @@
         "tags": ["Python", "RSA", "AES"],
         "github": "",
         "image": "/img/projects/proj-13.jpg"
-      },
-      {
-        "id": 14,
-        "name": "Secure password manager",
-        "description": "Desktop app with a strong password generator (following NIST guidelines), security validator and file encryption. Built with a GUI and automated tests.",
-        "tags": ["Python", "guizero", "pytest"],
-        "github": "",
-        "image": "/img/projects/proj-14.jpg"
       },
       {
         "id": 15,
