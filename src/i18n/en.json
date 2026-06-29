@@ -18,7 +18,8 @@
     "bio": "Creative–technical profile. Degree in Digital Technology and Multimedia (UPV) + Master's in AI (Università di Bologna, Erasmus). Passionate about the intersection of technology, creativity, and user experience.",
     "cta_primary": "View projects",
     "cta_secondary": "Contact",
-    "scroll": "SCROLL"
+    "scroll": "SCROLL",
+    "cta_cv": "Download CV"
   },
   "about": {
     "title": "About me",
@@ -44,63 +45,96 @@
         "name": "Traffic sign detection",
         "description": "Real-time computer vision for traffic sign classification in simulated autonomous driving",
         "tags": ["Python", "YOLOv8", "OpenCV"],
-        "github": ""
-      },
-      {
-        "id": 2,
-        "name": "Facial recognition",
-        "description": "Digital image processing scripts and identity validation",
-        "tags": ["Python", "Deep Learning"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-1.jpg"
       },
       {
         "id": 3,
         "name": "Jump height calculator",
         "description": "Application to calculate jump height with user database and comparative rankings",
         "tags": ["Python", "Matplotlib", "Pandas"],
-        "github": ""
-      },
-      {
-        "id": 4,
-        "name": "Tech company management",
-        "description": "Comprehensive ERP simulation, Gantt charts and cost control",
-        "tags": ["Microsoft Project"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-3.jpg"
       },
       {
         "id": 5,
         "name": "EcoClothes — E-commerce",
         "description": "Design and deployment of a functional e-commerce platform from scratch",
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-5.jpg"
       },
       {
         "id": 6,
         "name": "Embedded electronics",
         "description": "Circuit design and logic programming for intelligent portable devices",
         "tags": ["Arduino", "C++", "M5Stack"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-6.jpg"
       },
       {
         "id": 7,
         "name": "Voice-controlled games",
         "description": "Suite of 4 minigames responding to tone, volume and frequency with accessible UI",
         "tags": ["Java", "C#", "Audio DSP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-7.jpg"
       },
       {
         "id": 8,
         "name": "3D Animation — Cowboys",
         "description": "Textured 3D characters, complete scenes and modelling from scratch",
         "tags": ["Blender", "GIMP"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-8.jpg"
       },
       {
         "id": 9,
         "name": "Virtual Reality with Unity",
         "description": "VR prototypes with movement mechanics and 3D asset integration",
         "tags": ["Unity 3D", "C#"],
-        "github": ""
+        "github": "",
+        "image": "/img/projects/proj-9.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Bayesian networks for academic prediction",
+        "description": "Probabilistic model that predicts exam scores from student habits (study hours, sleep, attendance). Compares expert-built versus data-learned network structures, with probabilistic inference and sensitivity analysis.",
+        "tags": ["Python", "pgmpy", "Machine Learning"],
+        "github": "",
+        "image": "/img/projects/proj-10.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Machine Learning from scratch",
+        "description": "From-scratch implementation of ML fundamentals: gradient descent, SGD, logistic regression with the Adam optimizer, and PCA + clustering on MNIST. With metrics, decision boundaries and visualizations.",
+        "tags": ["Python", "scikit-learn", "Machine Learning"],
+        "github": "",
+        "image": "/img/projects/proj-11.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Android app — Water tank monitor",
+        "description": "Native Android app that monitors a water tank in real time, communicating over UDP with a Java server. Includes in/out controls and flow visualization.",
+        "tags": ["Kotlin", "Android", "UDP"],
+        "github": "",
+        "image": "/img/projects/proj-12.jpg"
+      },
+      {
+        "id": 13,
+        "name": "Encrypted client-server system",
+        "description": "Distributed security architecture with RSA digital signatures, AES symmetric encryption and a license server for secure content distribution.",
+        "tags": ["Python", "RSA", "AES"],
+        "github": "",
+        "image": "/img/projects/proj-13.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Brand identity — Design Book",
+        "description": "Complete visual identity manual for a brand: logo, colour palette, typography, usage guidelines and mockups. Professional graphic design documented end to end.",
+        "tags": ["Graphic Design", "Branding", "Illustrator"],
+        "github": "",
+        "image": "/img/projects/proj-15.jpg"
       }
     ]
   },
@@ -109,15 +143,15 @@
     "categories": [
       {
         "label": "Languages",
-        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "C++", "SQL", "C#"]
+        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "Kotlin", "C++", "SQL", "C#"]
       },
       {
         "label": "Creative",
-        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD"]
+        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD", "Illustrator"]
       },
       {
         "label": "Technical",
-        "items": ["Git/GitHub", "Arduino", "VS Code", "YOLOv8", "OpenCV", "Microsoft Project"]
+        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
       }
     ]
   },
