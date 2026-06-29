@@ -101,6 +101,48 @@
         "description": "VR prototypes with movement mechanics and 3D asset integration",
         "tags": ["Unity 3D", "C#"],
         "github": ""
+      },
+      {
+        "id": 10,
+        "name": "Bayesian networks for academic prediction",
+        "description": "Probabilistic model that predicts exam scores from student habits (study hours, sleep, attendance). Compares expert-built versus data-learned network structures, with probabilistic inference and sensitivity analysis.",
+        "tags": ["Python", "pgmpy", "Machine Learning"],
+        "github": ""
+      },
+      {
+        "id": 11,
+        "name": "Machine Learning from scratch",
+        "description": "From-scratch implementation of ML fundamentals: gradient descent, SGD, logistic regression with the Adam optimizer, and PCA + clustering on MNIST. With metrics, decision boundaries and visualizations.",
+        "tags": ["Python", "scikit-learn", "Machine Learning"],
+        "github": ""
+      },
+      {
+        "id": 12,
+        "name": "Android app — Water tank monitor",
+        "description": "Native Android app that monitors a water tank in real time, communicating over UDP with a Java server. Includes in/out controls and flow visualization.",
+        "tags": ["Kotlin", "Android", "UDP"],
+        "github": ""
+      },
+      {
+        "id": 13,
+        "name": "Encrypted client-server system",
+        "description": "Distributed security architecture with RSA digital signatures, AES symmetric encryption and a license server for secure content distribution.",
+        "tags": ["Python", "RSA", "AES"],
+        "github": ""
+      },
+      {
+        "id": 14,
+        "name": "Secure password manager",
+        "description": "Desktop app with a strong password generator (following NIST guidelines), security validator and file encryption. Built with a GUI and automated tests.",
+        "tags": ["Python", "guizero", "pytest"],
+        "github": ""
+      },
+      {
+        "id": 15,
+        "name": "Brand identity — Design Book",
+        "description": "Complete visual identity manual for a brand: logo, colour palette, typography, usage guidelines and mockups. Professional graphic design documented end to end.",
+        "tags": ["Graphic Design", "Branding", "Illustrator"],
+        "github": ""
       }
     ]
   },
@@ -109,15 +151,15 @@
     "categories": [
       {
         "label": "Languages",
-        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "C++", "SQL", "C#"]
+        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "Kotlin", "C++", "SQL", "C#"]
       },
       {
         "label": "Creative",
-        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD"]
+        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD", "Illustrator"]
       },
       {
         "label": "Technical",
-        "items": ["Git/GitHub", "Arduino", "VS Code", "YOLOv8", "OpenCV", "Microsoft Project"]
+        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
       }
     ]
   },

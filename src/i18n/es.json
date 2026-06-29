@@ -101,6 +101,48 @@
         "description": "Prototipos de VR con mecánicas de movimiento e integración de assets 3D",
         "tags": ["Unity 3D", "C#"],
         "github": ""
+      },
+      {
+        "id": 10,
+        "name": "Predicción académica con redes bayesianas",
+        "description": "Modelo probabilístico que predice la nota de un examen a partir de hábitos del estudiante (horas de estudio, sueño, asistencia). Compara estructuras expertas frente a estructuras aprendidas de los datos, con inferencia y análisis de sensibilidad.",
+        "tags": ["Python", "pgmpy", "Machine Learning"],
+        "github": ""
+      },
+      {
+        "id": 11,
+        "name": "Machine Learning desde cero",
+        "description": "Implementación, sin librerías de alto nivel, de los fundamentos del ML: descenso de gradiente, SGD, regresión logística con optimizador Adam y PCA + clustering sobre MNIST. Con métricas, fronteras de decisión y visualizaciones.",
+        "tags": ["Python", "scikit-learn", "Machine Learning"],
+        "github": ""
+      },
+      {
+        "id": 12,
+        "name": "App Android — Monitor de depósito",
+        "description": "Aplicación Android nativa que monitoriza en tiempo real el estado de un depósito de agua, comunicándose por UDP con un servidor Java. Incluye controles de entrada/salida y visualización de caudales.",
+        "tags": ["Kotlin", "Android", "UDP"],
+        "github": ""
+      },
+      {
+        "id": 13,
+        "name": "Sistema cliente-servidor cifrado",
+        "description": "Arquitectura distribuida de seguridad con firma digital RSA, cifrado simétrico AES y un servidor de licencias para la distribución segura de contenidos.",
+        "tags": ["Python", "RSA", "AES"],
+        "github": ""
+      },
+      {
+        "id": 14,
+        "name": "Gestor de contraseñas seguro",
+        "description": "Aplicación de escritorio con generador de contraseñas robustas (siguiendo guías NIST), validador de seguridad y cifrado de archivos. Construida con interfaz gráfica y tests automatizados.",
+        "tags": ["Python", "guizero", "pytest"],
+        "github": ""
+      },
+      {
+        "id": 15,
+        "name": "Identidad de marca — Design Book",
+        "description": "Manual completo de identidad visual de una marca: logotipo, paleta de color, tipografía, guías de uso y mockups. Diseño gráfico profesional documentado de principio a fin.",
+        "tags": ["Diseño gráfico", "Branding", "Illustrator"],
+        "github": ""
       }
     ]
   },
@@ -109,15 +151,15 @@
     "categories": [
       {
         "label": "Lenguajes",
-        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "C++", "SQL", "C#"]
+        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "Kotlin", "C++", "SQL", "C#"]
       },
       {
         "label": "Creativas",
-        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD"]
+        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD", "Illustrator"]
       },
       {
         "label": "Técnicas",
-        "items": ["Git/GitHub", "Arduino", "VS Code", "YOLOv8", "OpenCV", "Microsoft Project"]
+        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
       }
     ]
   },
