@@ -1,5 +1,6 @@
 ---
 // Hero section — dot grid, asymmetric layout, typewriter, profile photo
+const base = import.meta.env.BASE_URL;
 ---
 
 <section id="hero" class="dot-grid relative overflow-hidden" style="min-height:100vh;display:flex;align-items:center;">
@@ -37,7 +38,7 @@
         <div class="reveal reveal-delay-4 flex flex-wrap gap-3">
           <a href="#projects" class="hero-btn-primary font-bold" style="font-size:13px;" data-i18n="hero.cta_primary">Ver proyectos</a>
           <a href="#contact" class="hero-btn-secondary font-medium" style="font-size:13px;" data-i18n="hero.cta_secondary">Contacto</a>
-          <a href="/Enrique-Such-Andreu-CV.pdf" target="_blank" rel="noopener noreferrer" download class="hero-btn-secondary font-medium" style="font-size:13px;display:inline-flex;align-items:center;gap:8px;">
+          <a href={`${base}Enrique-Such-Andreu-CV.pdf`} target="_blank" rel="noopener noreferrer" download class="hero-btn-secondary font-medium" style="font-size:13px;display:inline-flex;align-items:center;gap:8px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span data-i18n="hero.cta_cv">Descargar CV</span>
           </a>
@@ -49,7 +50,7 @@
         <div class="profile-ring">
           <div style="width:200px;height:200px;border-radius:50%;overflow:hidden;background:#161616;border:1px solid #242424;display:flex;align-items:center;justify-content:center;position:relative;">
             <img
-              src="/img/profile.jpeg"
+              src={`${base}img/profile.jpeg`}
               alt="Enrique Such Andreu"
               style="width:100%;height:100%;object-fit:cover;"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
