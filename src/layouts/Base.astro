@@ -6,7 +6,7 @@ export interface Props {
 }
 
 const { title = 'Enrique Such Andreu — Portfolio' } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ const base = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio personal de Enrique Such Andreu — Tecnología Digital, IA y Diseño" />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
   </head>
 
   <body class="bg-bg text-text font-sans">
@@ -77,7 +77,7 @@ const base = import.meta.env.BASE_URL;
       let currentLang = localStorage.getItem('lang') || 'es';
 
       async function loadTranslations(lang: string) {
-        const res = await fetch(`${(window as any).__BASE__ || '/'}i18n/${lang}.json`);
+        const res = await fetch(`${(window as any).__BASE__ ?? ''}/i18n/${lang}.json`);
         translations = await res.json();
       }
 
