@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           {project.link && (
             <a
               class="card-link"
-              href={`${base}${project.link}`}
+              href={project.link.startsWith('http') ? project.link : `${base}${project.link}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Ver: ${project.name}`}

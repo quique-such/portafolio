@@ -47,7 +47,7 @@
         "tags": ["Python", "YOLOv8", "OpenCV"],
         "github": "",
         "image": "/img/projects/proj-1.jpg",
-        "link": "/projects/notebooks/yolo.html"
+        "link": "https://github.com/quique-such/deteccion-senales-trafico-yolov8"
       },
       {
         "id": 3,
@@ -56,7 +56,7 @@
         "tags": ["Python", "Matplotlib", "Pandas"],
         "github": "",
         "image": "/img/projects/proj-3.jpg",
-        "link": "/projects/gallery/salto.html"
+        "link": "https://github.com/quique-such/analisis-salto-vertical"
       },
       {
         "id": 5,
@@ -65,7 +65,7 @@
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
         "github": "",
         "image": "/img/projects/proj-5.jpg",
-        "link": "/projects/ecoclothes/inicio.html"
+        "link": "https://github.com/quique-such/ecoclothes-ecommerce"
       },
       {
         "id": 6,
@@ -74,7 +74,7 @@
         "tags": ["Arduino", "C++", "M5Stack"],
         "github": "",
         "image": "/img/projects/proj-6.jpg",
-        "link": "/projects/video/brujula.mp4"
+        "link": "https://github.com/quique-such/brujula-m5stack"
       },
       {
         "id": 7,
@@ -82,7 +82,8 @@
         "description": "Suite de 4 minijuegos que responden a tono, volumen y frecuencia con UI accesible",
         "tags": ["Java", "C#", "Audio DSP"],
         "github": "",
-        "image": "/img/projects/proj-7.jpg"
+        "image": "/img/projects/proj-7.jpg",
+        "link": "https://github.com/quique-such/minijuegos-sonoros"
       },
       {
         "id": 8,
@@ -91,7 +92,7 @@
         "tags": ["Blender", "GIMP"],
         "github": "",
         "image": "/img/projects/proj-8.jpg",
-        "link": "/projects/gallery/cowboys.html"
+        "link": "https://github.com/quique-such/diseno-personajes-3d"
       },
       {
         "id": 9,
@@ -100,7 +101,7 @@
         "tags": ["Unity 3D", "C#"],
         "github": "",
         "image": "/img/projects/proj-9.jpg",
-        "link": "/projects/video/vr.mp4"
+        "link": "https://github.com/quique-such/realidad-virtual-unity"
       },
       {
         "id": 10,
@@ -109,7 +110,7 @@
         "tags": ["Python", "pgmpy", "Machine Learning"],
         "github": "",
         "image": "/img/projects/proj-10.jpg",
-        "link": "/projects/doc/redes-bayesianas-informe.pdf"
+        "link": "https://github.com/quique-such/redes-bayesianas-prediccion"
       },
       {
         "id": 11,
@@ -118,7 +119,7 @@
         "tags": ["Python", "scikit-learn", "Machine Learning"],
         "github": "",
         "image": "/img/projects/proj-11.jpg",
-        "link": "/projects/notebooks/ml.html"
+        "link": "https://github.com/quique-such/machine-learning-desde-cero"
       },
       {
         "id": 12,
@@ -126,7 +127,8 @@
         "description": "Aplicación Android nativa que monitoriza en tiempo real el estado de un depósito de agua, comunicándose por UDP con un servidor Java. Incluye controles de entrada/salida y visualización de caudales.",
         "tags": ["Kotlin", "Android", "UDP"],
         "github": "",
-        "image": "/img/projects/proj-12.jpg"
+        "image": "/img/projects/proj-12.jpg",
+        "link": "https://github.com/quique-such/monitor-deposito-android"
       },
       {
         "id": 13,
@@ -135,7 +137,7 @@
         "tags": ["Python", "RSA", "AES"],
         "github": "",
         "image": "/img/projects/proj-13.jpg",
-        "link": "/projects/video/cifrado.mp4"
+        "link": "https://github.com/quique-such/sistema-cifrado-rsa-aes"
       },
       {
         "id": 15,
@@ -144,7 +146,7 @@
         "tags": ["Diseño gráfico", "Branding", "Illustrator"],
         "github": "",
         "image": "/img/projects/proj-15.jpg",
-        "link": "/projects/gallery/designbook.html"
+        "link": "https://github.com/quique-such/design-book-identidad-marca"
       }
     ]
   },
