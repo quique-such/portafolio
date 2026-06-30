@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="logotipo.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="carrito.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie Flower">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <title>EcoClothes</title>
+  <style>
+    section{
+      padding: 1px;
+      margin: 0px 40px;
+      text-align: center;
+    }
+
+    #conjuntoGracias {
+        width: 600px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid rgb(204, 204, 204);
+        background-color: rgb(225, 240, 225);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #gracias {
+      background-color: rgb(240, 240, 240);
+      padding: 50px 0;
+    }
+
+    #conjuntoGracias{
+      padding: 30px 40px;
+      padding-bottom: 135px;
+    }
+
+    p{
+      margin: 25px auto;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo"src="logotipo.png" alt="Logotipo EcoClothe">
+    <div>
+      <a id="titulo" href="inicio.html"><h1>EcoClothes</h1></a>
+      <div id="barraycarrito">
+        <aside>
+          <ul>
+            <li><a class="menu" href="inicio.html">Inicio</a></li>
+            <li><a class="menu" href="ropa.html">Tienda</a></li>
+            <li><a class="menu" href="pinguino.html">Apadrina un pingüino</a></li>
+            <li><a class="menu" href="amazonas.html">El Amazonas</a></li>
+          </ul>
+        </aside>
+        <table id="carrito" onclick="carritoVisible()">
+          <tr><td><img src="carrito.png" id="iconoCarrito" alt="Carrito de Compras"></td><td><span id="contadorCarrito">0</span></td></tr>
+        </table>
+
+        <div id="carritoVentana">
+          <h2>Carrito de Compras</h2>
+          <ul id="carritoLista"></ul>
+          <p id="carritoTotal">Total: <span>0</span></p><br>
+          <button id="botonPagar" onclick="pagar()">Pasar por caja</button><br><br><br>
+          <p id="vaciarCarrito" onclick="vaciarCarrito()">Vaciar carrito</p>
+          <p id="cerrarCarrito" onclick="cerrarCarrito()">Cerrar</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+    <section id="gracias">
+      <div id="conjuntoGracias">
+        <h2 style="padding-bottom: 20px;">Gracias por realizar un pedido!</h2>
+
+        <p>En breve prepararemos todos sus productos para el envío.</p>
+
+        <p>Te enviaremos una confirmación por correo electrónico en cuanto como tu pedido sea enviado. Si tienes alguna pregunta o necesitas asistencia, no dudes en ponerte en contacto con nuestro servicio de atención al cliente.</p>
+
+        <p>¡Agradecemos tu confianza en nosotros y esperamos que disfrutes de tus productos!</p><br>
+    
+        <p>Atentamente,<br>Tu Equipo de EcoClothes</p><img src="logotipo2.png" width="30px" height="30px">
+      </div>
+    </section>
+
+  <footer>
+    <div>
+      <p>&copy; 2024 EcoClothes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="carrito.js"></script>
+  <script src="pagar.js"></script>
+</body>
+</html>
+

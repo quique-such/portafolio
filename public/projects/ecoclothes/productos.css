@@ -1,0 +1,160 @@
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+
+.producto-detalles {
+  flex: 1;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+#talla{
+  display: block;
+  width: 43%;
+  padding: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#cantidad {
+  width: 60px;
+  height: 20px;
+  padding: 8px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-left: 88px;
+}
+
+#carrusel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  margin-left: 300px;
+}
+
+#image-slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  position:absolute;
+  top: 400px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {   
+  right: 10px;
+}
+
+.añadir {
+
+  font-size: 18px;    
+  border: solid #4CAF50 3px;
+  display: block;
+  width: 260px;
+  height: 80px;
+  padding: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #f4f4f4;
+  background-color: #4CAF50;
+}
+
+.añadir:hover {
+  color: #4CAF50;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.precio{
+  font-weight: bold;
+}
+
+details summary {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+#guia {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+#guia th, #guia td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+#descripcion::after{
+  content: '+';
+  padding-left: 500px;
+}
+
+details[open] #descripcion::after{
+  content: '-';
+  padding-left: 500px;
+}
+
+details #tallas::after{
+  content: '+';
+  padding-left: 486px;
+}
+
+details[open] #tallas::after{
+  content: '-';
+  padding-left: 486px;
+}
+
+details #envio::after{
+  content: '+';
+  padding-left: 544px;
+}
+
+details[open] #envio::after{
+  content: '-';
+  padding-left: 544px;
+}
+
+#panel, details {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#datosDescripcion {
+  padding: 15px;
+  display: none;
+}
+
+#datosTallas{
+  padding: 15px;
+  display: none;
+}
+
+#datosEnvio{
+  padding: 15px;
+  display: none;
+}

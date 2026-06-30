@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="logotipo.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tienda.css">
+  <link rel="stylesheet" href="carrito.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie Flower">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <title>EcoClothes</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo"src="logotipo.png" alt="Logotipo EcoClothe">
+    <div>
+      <a id="titulo" href="inicio.html"><h1>EcoClothes</h1></a>
+      <div id="barraycarrito">
+        <aside>
+          <ul>
+            <li><a class="menu" href="inicio.html">Inicio</a></li>
+            <li><a class="menu" href="ropa.html">Tienda</a></li>
+            <li><a class="menu" href="pinguino.html">Apadrina un pingüino</a></li>
+            <li><a class="menu" href="amazonas.html">El Amazonas</a></li>
+          </ul>
+        </aside>
+
+        <table id="carrito" onclick="carritoVisible()">
+          <tr><td><img src="carrito.png" id="iconoCarrito" alt="Carrito de Compras"></td><td><span id="contadorCarrito">0</span></td></tr>
+        </table>
+
+        <div id="carritoVentana">
+          <h2>Carrito de Compras</h2>
+          <ul id="carritoLista"></ul>
+          <p id="carritoTotal">Total: <span>0</span></p><br>
+          <button id="botonPagar" onclick="pagar()">Pasar por caja</button><br><br><br>
+          <p id="vaciarCarrito" onclick="vaciarCarrito()">Vaciar carrito</p>
+          <p id="cerrarCarrito" onclick="cerrarCarrito()">Cerrar</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <h1>Productos:</h1>
+  <section>
+    <div class="producto">
+      <a href="ProductosWebs/camiseta1.html" ><img onmouseover="girarfoto(this,'Productos/camiseta1_detras.png')" onmouseout="girarfoto2(this,'Productos/camiseta1_delante.png')"src="Productos/camiseta1_delante.png" class="ropa" ></a>
+      <h2>Camiseta Peace</h2>
+      <p>Precio: 20.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/camiseta2.html" ><img onmouseover="girarfoto(this,'Productos/camiseta2_detras.png')" onmouseout="girarfoto2(this,'Productos/camiseta2_delante.png')"src="Productos/camiseta2_delante.png" class="ropa" ></a>
+      <h2>Camiseta Save The World</h2>
+      <p>Precio: 20.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/sudadera1.html" ><img onmouseover="girarfoto(this,'Productos/sudadera1_detras.png')" onmouseout="girarfoto2(this,'Productos/sudadera1_delante.png')"src="Productos/sudadera1_delante.png" class="ropa" ></a>
+      <h2>Sudadera Love Yourself</h2>
+      <p>Precio: 35.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/sudadera2.html" ><img onmouseover="girarfoto(this,'Productos/sudadera2_detras.png')" onmouseout="girarfoto2(this,'Productos/sudadera2_delante.png')"src="Productos/sudadera2_delante.png" class="ropa" ></a>
+      <h2>Sudadera EcoClothes</h2>
+      <p>Precio: 30.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/polo.html" ><img onmouseover="girarfoto(this,'Productos/polo_detras.png')" onmouseout="girarfoto2(this,'Productos/polo_delante.png')"src="Productos/polo_delante.png" class="ropa" ></a>
+      <h2>Polo Marinero</h2>
+      <p>Precio: 25.00€</p>
+    </div>  
+
+    <div class="producto">
+      <a href="ProductosWebs/chaqueta.html" ><img onmouseover="girarfoto(this,'Productos/chaqueta_detras.png')" onmouseout="girarfoto2(this,'Productos/chaqueta_delante.png')"src="Productos/chaqueta_delante.png" class="ropa" ></a>
+      <h2>Chaqueta Recycle</h2>
+      <p>Precio: 40.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/pantalon.html" ><img onmouseover="girarfoto(this,'Productos/pantalon_detras.png')" onmouseout="girarfoto2(this,'Productos/pantalon_delante.png')"src="Productos/pantalon_delante.png" class="ropa" ></a>
+      <h2>Pantalón Chandal</h2>
+      <p>Precio: 23.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/delantal.html"><img  src="Productos/delantal.PNG" class="ropa"></a>
+      <h2>Delantal </h2>
+      <p>Precio: 12.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/camisa.html" ><img onmouseover="girarfoto(this,'Productos/camisa_detras.png')" onmouseout="girarfoto2(this,'Productos/camisa_delante.png')"src="Productos/camisa_delante.png" class="ropa" ></a>
+      <h2>Camisa</h2>
+      <p>Precio: 30.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/albornoz.html" ><img onmouseover="girarfoto(this,'Productos/albornoz_detras.png')" onmouseout="girarfoto2(this,'Productos/albornoz_delante.png')"src="Productos/albornoz_delante.png" class="ropa" ></a>
+      <h2>Albornoz</h2>
+      <p>Precio: 40.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/babero.html"><img src="Productos/babero.png" class="ropa"></a>
+      <h2>Babero</h2>
+      <p>Precio: 6.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/pantalonCorto.html" ><img onmouseover="girarfoto(this,'Productos/pantalon_Cortodetras.png')" onmouseout="girarfoto2(this,'Productos/pantalon_Cortodelante.png')"src="Productos/pantalon_Cortodelante.png" class="ropa" ></a>
+      <h2>Pantalón Corto</h2>
+      <p>Precio: 15.00€</p>
+    </div>
+
+    <div class="producto">
+      <a href="ProductosWebs/calzoncillos.html" ><img onmouseover="girarfoto(this,'Productos/calzoncillos_detras.png')" onmouseout="girarfoto2(this,'Productos/calzoncillos_delante.png')"src="Productos/calzoncillos_delante.png" class="ropa" ></a>
+      <h2>Calzoncillos</h2>
+      <p>Precio: 5.00€</p>
+    </div>
+
+  </section><br><br>
+
+  <a class="arriba"><img src="flecha.png" height="40px" width="40px"></a>
+  
+  <footer>
+    <div>
+      <p>&copy; 2024 EcoClothes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="java.js"></script>
+  <script src="boton_arriba.js"></script>
+  <script src="girarfoto.js"></script>
+  <script src="carrito.js"></script>
+</body>
+</html>

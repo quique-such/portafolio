@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="logotipo.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="carrito.css">
+  <link rel="stylesheet" href="pingu.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie Flower">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <title>EcoClothes</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo"src="logotipo.png" alt="Logotipo EcoClothe">
+    <div>
+      <a id="titulo" href="inicio.html"><h1>EcoClothes</h1></a>
+      <div id="barraycarrito">
+        <aside>
+          <ul>
+            <li><a class="menu" href="inicio.html">Inicio</a></li>
+            <li><a class="menu" href="ropa.html">Tienda</a></li>
+            <li><a class="menu" href="pinguino.html">Apadrina un pingüino</a></li>
+            <li><a class="menu" href="amazonas.html">El Amazonas</a></li>
+          </ul>
+        </aside>
+
+        <table id="carrito" onclick="carritoVisible()">
+          <tr><td><img src="carrito.png" id="iconoCarrito" alt="Carrito de Compras"></td><td><span id="contadorCarrito">0</span></td></tr>
+        </table>
+
+        <div id="carritoVentana">
+          <h2>Carrito de Compras</h2>
+          <ul id="carritoLista"></ul>
+          <p id="carritoTotal">Total: <span>0</span></p><br>
+          <button id="botonPagar" onclick="pagar()">Pasar por caja</button><br><br><br>
+          <p id="vaciarCarrito" onclick="vaciarCarrito()">Vaciar carrito</p>
+          <p id="cerrarCarrito" onclick="cerrarCarrito()">Cerrar</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <h1 id="apadrinar">Apadrina un Pingüino</h1>
+
+  <section>
+    <h2>¿Por qué apadrinar un pingüino?</h2>
+    <div id="pingus"><img src="pingus.jpeg" alt="Pingüinos" width="350" height="250"></div>
+    <p>Apadrinar un pingüino es una forma maravillosa de contribuir a la conservación de estas adorables aves. Tu apoyo ayuda a preservar su hábitat natural y a financiar programas de investigación y protección.</p>
+    <p>Aquí tienes algunas razones por las que deberías apadrinar un pingüino:</p>
+    <ul>
+        <li><b>Conservación del Hábitat: </b>Financia la preservación de áreas esenciales.</li>
+        <li><b>Investigación Científica: </b>Contribuye a estudios sobre biología y ecología.</li>
+        <li><b>Protección contra Amenazas: </b>Ayuda a mitigar riesgos y amenazas.</li>
+        <li><b>Educación Ambiental: </b>Fomenta la conciencia sobre la conservación marina.</li>
+        <li><b>Cuidado Individual: </b>Contribuye al bienestar y atención médica de los pingüinos.</li>
+        <li><b>Prácticas Sostenibles: </b>Promueve prácticas amigables con el entorno.</li>
+        <li><b>Preservación de Biodiversidad: </b>Mantiene un equilibrio saludable en los ecosistemas.</li>
+        <li><b>Impacto Global: </b>Contribuye a un futuro más sostenible para el planeta.</li>
+      </ul><br><br>
+    <h2>¿Cómo apadrinar?</h2>
+    <p>Para apadrinar un pingüino, simplemente realiza una donación. A cambio, recibirás actualizaciones periódicas sobre el estado y las actividades de tu pingüino apadrinado:</p>
+  </section>
+
+  <section id="pago">
+    <form name="formulario" method="post" onsubmit="return validarFormulario()">
+      <div id="datosUsuario">
+          <h3>Datos del usuario</h3><br>
+
+          <label>Nombre completo<input type="text" id="nombre" name="nombre" required></label>
+          
+          <label>Correo electrónico<input type="email" id="email" name="email" required></label>
+
+          <label>Dirección<input type="text" id="dir" name="dir" required></label>
+          
+          <label>Ciudad<input type="text" id="ciudad" name="ciudad" required></label>
+          
+          <label>Provincia
+          <select id="provincias" name="provincias">
+              <option value="alava">Álava</option>
+              <option value="albacete">Albacete</option>
+              <option value="alicante">Alicante</option>
+              <option value="almeria">Almería</option>
+              <option value="asturias">Asturias</option>
+              <option value="avila">Ávila</option>
+              <option value="badajoz">Badajoz</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="burgos">Burgos</option>
+              <option value="caceres">Cáceres</option>
+              <option value="cadiz">Cádiz</option>
+              <option value="cantabria">Cantabria</option>
+              <option value="castellon">Castellón</option>
+              <option value="ciudadreal">Ciudad Real</option>
+              <option value="cordoba">Córdoba</option>
+              <option value="cuenca">Cuenca</option>
+              <option value="gerona">Gerona</option>
+              <option value="granada">Granada</option>
+              <option value="guadalajara">Guadalajara</option>
+              <option value="guipuzcoa">Guipúzcoa</option>
+              <option value="huelva">Huelva</option>
+              <option value="huesca">Huesca</option>
+              <option value="islasbaleares">Islas Baleares</option>
+              <option value="jaen">Jaén</option>
+              <option value="larioja">La Rioja</option>
+              <option value="laspalmas">Las Palmas</option>
+              <option value="leon">León</option>
+              <option value="lleida">Lérida</option>
+              <option value="lugo">Lugo</option>
+              <option value="madrid">Madrid</option>
+              <option value="malaga">Málaga</option>
+              <option value="murcia">Murcia</option>
+              <option value="navarra">Navarra</option>
+              <option value="ourense">Ourense</option>
+              <option value="palencia">Palencia</option>
+              <option value="pontevedra">Pontevedra</option>
+              <option value="salamanca">Salamanca</option>
+              <option value="tenerife">Santa Cruz de Tenerife</option>
+              <option value="segovia">Segovia</option>
+              <option value="sevilla">Sevilla</option>
+              <option value="soria">Soria</option>
+              <option value="tarragona">Tarragona</option>
+              <option value="teruel">Teruel</option>
+              <option value="toledo">Toledo</option>
+              <option value="valencia">Valencia</option>
+              <option value="valladolid">Valladolid</option>
+              <option value="vizcaya">Vizcaya</option>
+              <option value="zamora">Zamora</option>
+              <option value="zaragoza">Zaragoza</option>
+          </select></label>
+          
+          <label>Código postal<input type="number" id="postal" name="postal" required oninput="maximo(this, 4)"></label>
+      </div>
+
+      <div id="datosTarjeta">
+          <h3>Datos de pago</h3><br>
+
+          <label>Titular de la tarjeta</label><input type="text" id="titular" name="titular" required></label><br>
+
+          <label>Fecha de nacimiento del titular</label><input type="date" id="fecha" name="fecha" required></label><br>
+
+          <label>Edad del titular</label><input type="number" id="edad" name="edad" min="18" required></label><br>
+
+          <label>Número de tarjeta</label><input type="number" id="tarj" name="tarj" required oninput="maximo(this, 16)"></label><br>
+
+          <label>Mes de vencimiento</label><input type="number" id="mes" name="mes" min="1" max="12" placeholder="MM" required oninput="maximo(this, 2)"></label><br>
+
+          <label>Año de vencimiento</label><input type="number" id="anyo" name="anyo" min="2024" placeholder="AAAA" required oninput="maximo(this, 4)"></label><br>
+
+          <label>CVV</label><input type="number" id="cvv" name="cvv" min="000" max="999" placeholder="123" required oninput="maximo(this, 3)"></label><br>
+      </div>
+      <button>Hacer donación</button>
+    </form>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 EcoClothes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function maximo(x, y) {
+        if (x.value.length > y) {
+            x.value = x.value.slice(0,y);
+        }
+    }
+  </script>
+
+  <script src="carrito.js"></script>
+  <script src="pagar.js"></script>
+
+</body>
+</html>

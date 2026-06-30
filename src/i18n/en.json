@@ -46,7 +46,8 @@
         "description": "Real-time computer vision for traffic sign classification in simulated autonomous driving",
         "tags": ["Python", "YOLOv8", "OpenCV"],
         "github": "",
-        "image": "/img/projects/proj-1.jpg"
+        "image": "/img/projects/proj-1.jpg",
+        "link": "/projects/notebooks/yolo.html"
       },
       {
         "id": 3,
@@ -54,7 +55,8 @@
         "description": "Application to calculate jump height with user database and comparative rankings",
         "tags": ["Python", "Matplotlib", "Pandas"],
         "github": "",
-        "image": "/img/projects/proj-3.jpg"
+        "image": "/img/projects/proj-3.jpg",
+        "link": "/projects/gallery/salto.html"
       },
       {
         "id": 5,
@@ -62,7 +64,8 @@
         "description": "Design and deployment of a functional e-commerce platform from scratch",
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
         "github": "",
-        "image": "/img/projects/proj-5.jpg"
+        "image": "/img/projects/proj-5.jpg",
+        "link": "/projects/ecoclothes/inicio.html"
       },
       {
         "id": 6,
@@ -70,7 +73,8 @@
         "description": "Circuit design and logic programming for intelligent portable devices",
         "tags": ["Arduino", "C++", "M5Stack"],
         "github": "",
-        "image": "/img/projects/proj-6.jpg"
+        "image": "/img/projects/proj-6.jpg",
+        "link": "/projects/video/brujula.mp4"
       },
       {
         "id": 7,
@@ -86,7 +90,8 @@
         "description": "Textured 3D characters, complete scenes and modelling from scratch",
         "tags": ["Blender", "GIMP"],
         "github": "",
-        "image": "/img/projects/proj-8.jpg"
+        "image": "/img/projects/proj-8.jpg",
+        "link": "/projects/gallery/cowboys.html"
       },
       {
         "id": 9,
@@ -94,7 +99,8 @@
         "description": "VR prototypes with movement mechanics and 3D asset integration",
         "tags": ["Unity 3D", "C#"],
         "github": "",
-        "image": "/img/projects/proj-9.jpg"
+        "image": "/img/projects/proj-9.jpg",
+        "link": "/projects/video/vr.mp4"
       },
       {
         "id": 10,
@@ -102,7 +108,8 @@
         "description": "Probabilistic model that predicts exam scores from student habits (study hours, sleep, attendance). Compares expert-built versus data-learned network structures, with probabilistic inference and sensitivity analysis.",
         "tags": ["Python", "pgmpy", "Machine Learning"],
         "github": "",
-        "image": "/img/projects/proj-10.jpg"
+        "image": "/img/projects/proj-10.jpg",
+        "link": "/projects/doc/redes-bayesianas-informe.pdf"
       },
       {
         "id": 11,
@@ -110,7 +117,8 @@
         "description": "From-scratch implementation of ML fundamentals: gradient descent, SGD, logistic regression with the Adam optimizer, and PCA + clustering on MNIST. With metrics, decision boundaries and visualizations.",
         "tags": ["Python", "scikit-learn", "Machine Learning"],
         "github": "",
-        "image": "/img/projects/proj-11.jpg"
+        "image": "/img/projects/proj-11.jpg",
+        "link": "/projects/notebooks/ml.html"
       },
       {
         "id": 12,
@@ -126,7 +134,8 @@
         "description": "Distributed security architecture with RSA digital signatures, AES symmetric encryption and a license server for secure content distribution.",
         "tags": ["Python", "RSA", "AES"],
         "github": "",
-        "image": "/img/projects/proj-13.jpg"
+        "image": "/img/projects/proj-13.jpg",
+        "link": "/projects/video/cifrado.mp4"
       },
       {
         "id": 15,
@@ -134,7 +143,8 @@
         "description": "Complete visual identity manual for a brand: logo, colour palette, typography, usage guidelines and mockups. Professional graphic design documented end to end.",
         "tags": ["Graphic Design", "Branding", "Illustrator"],
         "github": "",
-        "image": "/img/projects/proj-15.jpg"
+        "image": "/img/projects/proj-15.jpg",
+        "link": "/projects/gallery/designbook.html"
       }
     ]
   },

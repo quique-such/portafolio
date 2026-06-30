@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="logotipo.ico">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../carrito.css">
+  <link rel="stylesheet" href="../productos.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie Flower">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <title>EcoClothes</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="../logotipo.png" alt="Logotipo EcoClothe">
+    <div>
+      <a id="titulo" href="../inicio.html"><h1>EcoClothes</h1></a>
+      <div id="barraycarrito">
+        <aside>
+          <ul>
+            <li><a class="menu" href="../inicio.html">Inicio</a></li>
+            <li><a class="menu" href="../ropa.html">Tienda</a></li>
+            <li><a class="menu" href="../pinguino.html">Apadrina un pingüino</a></li>
+            <li><a class="menu" href="../amazonas.html">El Amazonas</a></li>
+          </ul>
+        </aside>
+        <table id="carrito" onclick="carritoVisible()">
+          <tr><td><img src="../carrito.png" id="iconoCarrito" alt="Carrito de Compras"></td><td><span id="contadorCarrito">0</span></td></tr>
+        </table>
+
+        <div id="carritoVentana">
+          <h2>Carrito de Compras</h2>
+          <ul id="carritoLista"></ul>
+          <p id="carritoTotal">Total: <span>0</span></p><br>
+          <button id="botonPagar" onclick="pagar2()">Pasar por caja</button><br><br><br>
+          <p id="vaciarCarrito" onclick="vaciarCarrito()">Vaciar carrito</p>
+          <p id="cerrarCarrito" onclick="cerrarCarrito()">Cerrar</p>
+        </div>
+      </div>
+    </div>
+  </header>
+    <br>
+    <div class="productos-contenedor">
+      <div id="carrusel">
+        <div id="image-slider">
+          <div class="slide"><a href="../Productos/chaqueta_delante.png"><img src="../Productos/chaqueta_delante.png" alt="Slide 1"></a></div>
+          <div class="slide"><a href="../Productos/chaqueta_detras.png"><img src="../Productos/chaqueta_detras.png" alt="Slide 2"></a></div>
+        </div>
+      
+        <div class="prev" onclick="prevSlide()">&#10094;</div>
+        <div class="next" onclick="nextSlide()">&#10095;</div>
+      </div>
+    
+      <div class="producto-detalles">
+        <h2>Chaqueta Recycle</h2>
+    
+        <span class="precio">40.00</span><span class="precio" >€</span><br><br>
+    
+        <label for="talla">Talla:</label>
+        <select id="talla">
+          <option value="s">S</option>
+          <option value="m">M</option>
+          <option value="l">L</option>
+          <option value="xl">XL</option>
+        </select>
+        <br>
+        <label for="cantidad">Cantidad:</label>
+        <br>
+        <input id="cantidad" type="number" min="1" value="1">
+        <br><br>
+        <button class="añadir" onclick="anadirCarrito(this.parentNode)">Añadir al carrito</button><br>
+        <hr>
+        <details><summary id="descripcion" onclick="mostrarDetalles(this.id)">Descripción</summary></details>
+        <div id="datosDescripcion">Este producto se confecciona utilizando algodón orgánico cultivado sin el uso de pesticidas ni fertilizantes químicos, reduciendo así la contaminación del suelo y el agua. Además, el proceso de tintura utilizamos técnicas respetuosas con el agua y pigmentos no tóxicos, disminuyendo la huella ambiental asociada con los colorantes convencionales.</div>
+        <hr>
+        <details><summary id="tallas" onclick="mostrarDetalles(this.id)">Guía de tallas</summary></details>
+        <div id="datosTallas"> 
+          <table id="guia">
+            <tr>
+                <th></th>
+                <th>S</th>
+                <th>M</th>
+                <th>L</th>
+                <th>XL</th>
+            </tr>
+            <tr>
+                <th>Pecho</th>
+                <td>61</td>
+                <td>65</td>
+                <td>68</td>
+                <td>71</td>
+            </tr>
+            <tr>
+                <th>Largo</th>
+                <td>65</td>
+                <td>69</td>
+                <td>72</td>
+                <td>74</td>
+            </tr>
+          </table>
+        </div>
+        <hr>
+        <details><summary id="envio" onclick="mostrarDetalles(this.id)">Envío</summary></details>
+        <div id="datosEnvio">Producto listo para enviar. Llegará aproximadamente en 3 días laborables.</div>
+        <hr>
+       
+   
+      </div>
+    </div><br><br>
+<footer>
+<div class="container">
+    <p>&copy; 2024 EcoClothes. Todos los derechos reservados.</p>
+</div>
+</footer>
+  <script src="../slide.js"></script>
+  <script src="../carrito.js"></script>
+  <script src="../productos.js"></script>
+
+</body>
+</html>
+
+
