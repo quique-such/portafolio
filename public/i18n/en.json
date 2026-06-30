@@ -87,12 +87,12 @@
       },
       {
         "id": 8,
-        "name": "3D Animation — Cowboys",
-        "description": "Textured 3D characters, complete scenes and modelling from scratch",
-        "tags": ["Blender", "GIMP"],
+        "name": "3D design & animation — Cowboys",
+        "description": "Cyborg-cowboy character design end to end: visual identity (Design Book), 3D modelling, texturing, rigging and animation of characters and scenes.",
+        "tags": ["Blender", "GIMP", "Illustrator"],
         "github": "",
         "image": "/img/projects/proj-8.jpg",
-        "link": "https://github.com/quique-such/diseno-personajes-3d"
+        "link": "https://github.com/quique-such/diseno-3d-cowboys"
       },
       {
         "id": 9,
@@ -138,15 +138,6 @@
         "github": "",
         "image": "/img/projects/proj-13.jpg",
         "link": "https://github.com/quique-such/sistema-cifrado-rsa-aes"
-      },
-      {
-        "id": 15,
-        "name": "Brand identity — Design Book",
-        "description": "Complete visual identity manual for a brand: logo, colour palette, typography, usage guidelines and mockups. Professional graphic design documented end to end.",
-        "tags": ["Graphic Design", "Branding", "Illustrator"],
-        "github": "",
-        "image": "/img/projects/proj-15.jpg",
-        "link": "https://github.com/quique-such/design-book-identidad-marca"
       }
     ]
   },
