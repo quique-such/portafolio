@@ -138,6 +138,24 @@
         "github": "",
         "image": "/img/projects/proj-13.jpg",
         "link": "https://github.com/quique-such/sistema-cifrado-rsa-aes"
+      },
+      {
+        "id": 16,
+        "name": "Contenedores con Docker",
+        "description": "Taller práctico de Docker y contenedores: Dockerfiles, imágenes, registros, Kubernetes/Minikube y dev containers, con documentación y diagramas paso a paso.",
+        "tags": ["Docker", "Kubernetes", "DevOps"],
+        "github": "",
+        "image": "/img/projects/proj-16.jpg",
+        "link": "https://github.com/quique-such/docker-contenedores"
+      },
+      {
+        "id": 17,
+        "name": "Gestión de proyectos — DRÖNER",
+        "description": "Dirección y planificación de una startup de reparto con drones: EDT, diagrama de Gantt, asignación de recursos, presupuestos y análisis de riesgos en MS Project.",
+        "tags": ["MS Project", "Gantt", "Gestión"],
+        "github": "",
+        "image": "/img/projects/proj-17.jpg",
+        "link": "https://github.com/quique-such/gestion-proyectos-droner"
       }
     ]
   },
@@ -154,7 +172,7 @@
       },
       {
         "label": "Técnicas",
-        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
+        "items": ["Git/GitHub", "Docker", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
       }
     ]
   },
