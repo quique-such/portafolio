@@ -46,7 +46,8 @@
         "description": "Visión artificial en tiempo real para clasificación de señales en conducción autónoma simulada",
         "tags": ["Python", "YOLOv8", "OpenCV"],
         "github": "",
-        "image": "/img/projects/proj-1.jpg"
+        "image": "/img/projects/proj-1.jpg",
+        "link": "https://github.com/quique-such/deteccion-senales-trafico-yolov8"
       },
       {
         "id": 3,
@@ -54,7 +55,8 @@
         "description": "Aplicación para calcular altura de salto con BBDD de usuarios y rankings comparativos",
         "tags": ["Python", "Matplotlib", "Pandas"],
         "github": "",
-        "image": "/img/projects/proj-3.jpg"
+        "image": "/img/projects/proj-3.jpg",
+        "link": "https://github.com/quique-such/analisis-salto-vertical"
       },
       {
         "id": 5,
@@ -62,7 +64,8 @@
         "description": "Diseño y despliegue de plataforma e-commerce funcional desde cero",
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
         "github": "",
-        "image": "/img/projects/proj-5.jpg"
+        "image": "/img/projects/proj-5.jpg",
+        "link": "https://github.com/quique-such/ecoclothes-ecommerce"
       },
       {
         "id": 6,
@@ -70,7 +73,8 @@
         "description": "Diseño de circuitos y programación lógica para dispositivos portátiles inteligentes",
         "tags": ["Arduino", "C++", "M5Stack"],
         "github": "",
-        "image": "/img/projects/proj-6.jpg"
+        "image": "/img/projects/proj-6.jpg",
+        "link": "https://github.com/quique-such/brujula-m5stack"
       },
       {
         "id": 7,
@@ -78,15 +82,17 @@
         "description": "Suite de 4 minijuegos que responden a tono, volumen y frecuencia con UI accesible",
         "tags": ["Java", "C#", "Audio DSP"],
         "github": "",
-        "image": "/img/projects/proj-7.jpg"
+        "image": "/img/projects/proj-7.jpg",
+        "link": "https://github.com/quique-such/minijuegos-sonoros"
       },
       {
         "id": 8,
-        "name": "Animación 3D — Cowboys",
-        "description": "Personajes 3D texturizados, escenas completas y modelado desde cero",
-        "tags": ["Blender", "GIMP"],
+        "name": "Diseño y animación 3D — Cowboys",
+        "description": "Diseño de personajes cyborg-cowboy de principio a fin: identidad visual (Design Book), modelado, texturizado, rigging y animación 3D de personajes y escenas.",
+        "tags": ["Blender", "GIMP", "Illustrator"],
         "github": "",
-        "image": "/img/projects/proj-8.jpg"
+        "image": "/img/projects/proj-8.jpg",
+        "link": "https://github.com/quique-such/diseno-3d-cowboys"
       },
       {
         "id": 9,
@@ -94,7 +100,8 @@
         "description": "Prototipos de VR con mecánicas de movimiento e integración de assets 3D",
         "tags": ["Unity 3D", "C#"],
         "github": "",
-        "image": "/img/projects/proj-9.jpg"
+        "image": "/img/projects/proj-9.jpg",
+        "link": "https://github.com/quique-such/realidad-virtual-unity"
       },
       {
         "id": 10,
@@ -102,7 +109,8 @@
         "description": "Modelo probabilístico que predice la nota de un examen a partir de hábitos del estudiante (horas de estudio, sueño, asistencia). Compara estructuras expertas frente a estructuras aprendidas de los datos, con inferencia y análisis de sensibilidad.",
         "tags": ["Python", "pgmpy", "Machine Learning"],
         "github": "",
-        "image": "/img/projects/proj-10.jpg"
+        "image": "/img/projects/proj-10.jpg",
+        "link": "https://github.com/quique-such/redes-bayesianas-prediccion"
       },
       {
         "id": 11,
@@ -110,7 +118,8 @@
         "description": "Implementación, sin librerías de alto nivel, de los fundamentos del ML: descenso de gradiente, SGD, regresión logística con optimizador Adam y PCA + clustering sobre MNIST. Con métricas, fronteras de decisión y visualizaciones.",
         "tags": ["Python", "scikit-learn", "Machine Learning"],
         "github": "",
-        "image": "/img/projects/proj-11.jpg"
+        "image": "/img/projects/proj-11.jpg",
+        "link": "https://github.com/quique-such/machine-learning-desde-cero"
       },
       {
         "id": 12,
@@ -118,7 +127,8 @@
         "description": "Aplicación Android nativa que monitoriza en tiempo real el estado de un depósito de agua, comunicándose por UDP con un servidor Java. Incluye controles de entrada/salida y visualización de caudales.",
         "tags": ["Kotlin", "Android", "UDP"],
         "github": "",
-        "image": "/img/projects/proj-12.jpg"
+        "image": "/img/projects/proj-12.jpg",
+        "link": "https://github.com/quique-such/monitor-deposito-android"
       },
       {
         "id": 13,
@@ -126,15 +136,26 @@
         "description": "Arquitectura distribuida de seguridad con firma digital RSA, cifrado simétrico AES y un servidor de licencias para la distribución segura de contenidos.",
         "tags": ["Python", "RSA", "AES"],
         "github": "",
-        "image": "/img/projects/proj-13.jpg"
+        "image": "/img/projects/proj-13.jpg",
+        "link": "https://github.com/quique-such/sistema-cifrado-rsa-aes"
       },
       {
-        "id": 15,
-        "name": "Identidad de marca — Design Book",
-        "description": "Manual completo de identidad visual de una marca: logotipo, paleta de color, tipografía, guías de uso y mockups. Diseño gráfico profesional documentado de principio a fin.",
-        "tags": ["Diseño gráfico", "Branding", "Illustrator"],
+        "id": 16,
+        "name": "Contenedores con Docker",
+        "description": "Taller práctico de Docker y contenedores: Dockerfiles, imágenes, registros, Kubernetes/Minikube y dev containers, con documentación y diagramas paso a paso.",
+        "tags": ["Docker", "Kubernetes", "DevOps"],
         "github": "",
-        "image": "/img/projects/proj-15.jpg"
+        "image": "/img/projects/proj-16.jpg",
+        "link": "https://github.com/quique-such/docker-contenedores"
+      },
+      {
+        "id": 17,
+        "name": "Gestión de proyectos — DRÖNER",
+        "description": "Dirección y planificación de una startup de reparto con drones: EDT, diagrama de Gantt, asignación de recursos, presupuestos y análisis de riesgos en MS Project.",
+        "tags": ["MS Project", "Gantt", "Gestión"],
+        "github": "",
+        "image": "/img/projects/proj-17.jpg",
+        "link": "https://github.com/quique-such/gestion-proyectos-droner"
       }
     ]
   },
@@ -151,7 +172,7 @@
       },
       {
         "label": "Técnicas",
-        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
+        "items": ["Git/GitHub", "Docker", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
       }
     ]
   },

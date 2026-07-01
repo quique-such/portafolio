@@ -46,7 +46,8 @@
         "description": "Real-time computer vision for traffic sign classification in simulated autonomous driving",
         "tags": ["Python", "YOLOv8", "OpenCV"],
         "github": "",
-        "image": "/img/projects/proj-1.jpg"
+        "image": "/img/projects/proj-1.jpg",
+        "link": "https://github.com/quique-such/deteccion-senales-trafico-yolov8"
       },
       {
         "id": 3,
@@ -54,7 +55,8 @@
         "description": "Application to calculate jump height with user database and comparative rankings",
         "tags": ["Python", "Matplotlib", "Pandas"],
         "github": "",
-        "image": "/img/projects/proj-3.jpg"
+        "image": "/img/projects/proj-3.jpg",
+        "link": "https://github.com/quique-such/analisis-salto-vertical"
       },
       {
         "id": 5,
@@ -62,7 +64,8 @@
         "description": "Design and deployment of a functional e-commerce platform from scratch",
         "tags": ["HTML5", "CSS", "JavaScript", "Git"],
         "github": "",
-        "image": "/img/projects/proj-5.jpg"
+        "image": "/img/projects/proj-5.jpg",
+        "link": "https://github.com/quique-such/ecoclothes-ecommerce"
       },
       {
         "id": 6,
@@ -70,7 +73,8 @@
         "description": "Circuit design and logic programming for intelligent portable devices",
         "tags": ["Arduino", "C++", "M5Stack"],
         "github": "",
-        "image": "/img/projects/proj-6.jpg"
+        "image": "/img/projects/proj-6.jpg",
+        "link": "https://github.com/quique-such/brujula-m5stack"
       },
       {
         "id": 7,
@@ -78,15 +82,17 @@
         "description": "Suite of 4 minigames responding to tone, volume and frequency with accessible UI",
         "tags": ["Java", "C#", "Audio DSP"],
         "github": "",
-        "image": "/img/projects/proj-7.jpg"
+        "image": "/img/projects/proj-7.jpg",
+        "link": "https://github.com/quique-such/minijuegos-sonoros"
       },
       {
         "id": 8,
-        "name": "3D Animation — Cowboys",
-        "description": "Textured 3D characters, complete scenes and modelling from scratch",
-        "tags": ["Blender", "GIMP"],
+        "name": "3D design & animation — Cowboys",
+        "description": "Cyborg-cowboy character design end to end: visual identity (Design Book), 3D modelling, texturing, rigging and animation of characters and scenes.",
+        "tags": ["Blender", "GIMP", "Illustrator"],
         "github": "",
-        "image": "/img/projects/proj-8.jpg"
+        "image": "/img/projects/proj-8.jpg",
+        "link": "https://github.com/quique-such/diseno-3d-cowboys"
       },
       {
         "id": 9,
@@ -94,7 +100,8 @@
         "description": "VR prototypes with movement mechanics and 3D asset integration",
         "tags": ["Unity 3D", "C#"],
         "github": "",
-        "image": "/img/projects/proj-9.jpg"
+        "image": "/img/projects/proj-9.jpg",
+        "link": "https://github.com/quique-such/realidad-virtual-unity"
       },
       {
         "id": 10,
@@ -102,7 +109,8 @@
         "description": "Probabilistic model that predicts exam scores from student habits (study hours, sleep, attendance). Compares expert-built versus data-learned network structures, with probabilistic inference and sensitivity analysis.",
         "tags": ["Python", "pgmpy", "Machine Learning"],
         "github": "",
-        "image": "/img/projects/proj-10.jpg"
+        "image": "/img/projects/proj-10.jpg",
+        "link": "https://github.com/quique-such/redes-bayesianas-prediccion"
       },
       {
         "id": 11,
@@ -110,7 +118,8 @@
         "description": "From-scratch implementation of ML fundamentals: gradient descent, SGD, logistic regression with the Adam optimizer, and PCA + clustering on MNIST. With metrics, decision boundaries and visualizations.",
         "tags": ["Python", "scikit-learn", "Machine Learning"],
         "github": "",
-        "image": "/img/projects/proj-11.jpg"
+        "image": "/img/projects/proj-11.jpg",
+        "link": "https://github.com/quique-such/machine-learning-desde-cero"
       },
       {
         "id": 12,
@@ -118,7 +127,8 @@
         "description": "Native Android app that monitors a water tank in real time, communicating over UDP with a Java server. Includes in/out controls and flow visualization.",
         "tags": ["Kotlin", "Android", "UDP"],
         "github": "",
-        "image": "/img/projects/proj-12.jpg"
+        "image": "/img/projects/proj-12.jpg",
+        "link": "https://github.com/quique-such/monitor-deposito-android"
       },
       {
         "id": 13,
@@ -126,15 +136,26 @@
         "description": "Distributed security architecture with RSA digital signatures, AES symmetric encryption and a license server for secure content distribution.",
         "tags": ["Python", "RSA", "AES"],
         "github": "",
-        "image": "/img/projects/proj-13.jpg"
+        "image": "/img/projects/proj-13.jpg",
+        "link": "https://github.com/quique-such/sistema-cifrado-rsa-aes"
       },
       {
-        "id": 15,
-        "name": "Brand identity — Design Book",
-        "description": "Complete visual identity manual for a brand: logo, colour palette, typography, usage guidelines and mockups. Professional graphic design documented end to end.",
-        "tags": ["Graphic Design", "Branding", "Illustrator"],
+        "id": 16,
+        "name": "Containers with Docker",
+        "description": "Hands-on Docker and containers workshop: Dockerfiles, images, registries, Kubernetes/Minikube and dev containers, with step-by-step documentation and diagrams.",
+        "tags": ["Docker", "Kubernetes", "DevOps"],
         "github": "",
-        "image": "/img/projects/proj-15.jpg"
+        "image": "/img/projects/proj-16.jpg",
+        "link": "https://github.com/quique-such/docker-contenedores"
+      },
+      {
+        "id": 17,
+        "name": "Project management — DRÖNER",
+        "description": "Direction and planning of a drone-delivery startup: WBS, Gantt chart, resource allocation, budgeting and risk analysis in MS Project.",
+        "tags": ["MS Project", "Gantt", "Management"],
+        "github": "",
+        "image": "/img/projects/proj-17.jpg",
+        "link": "https://github.com/quique-such/gestion-proyectos-droner"
       }
     ]
   },
@@ -151,7 +172,7 @@
       },
       {
         "label": "Technical",
-        "items": ["Git/GitHub", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
+        "items": ["Git/GitHub", "Docker", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
       }
     ]
   },

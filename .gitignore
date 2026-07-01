@@ -2,3 +2,6 @@ node_modules/
 dist/
 .env
 .DS_Store
+.tools/
+Abrir Portafolio.bat
+LEEME.txt
