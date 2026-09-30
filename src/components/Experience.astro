@@ -9,7 +9,7 @@ const items = esData.experience.items;
     <!-- Section title -->
     <div class="reveal" style="margin-bottom:56px;">
       <p class="font-mono text-accent uppercase" style="font-size:11px;letter-spacing:0.2em;margin-bottom:10px;">// 04</p>
-      <h2 class="text-text font-extrabold" style="font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.02em;line-height:1.1;" data-i18n="experience.title">Experiencia &amp; Actividades</h2>
+      <h2 class="text-text font-extrabold" style="font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.02em;line-height:1.1;" data-i18n="experience.title">{esData.experience.title}</h2>
       <div class="section-bar"></div>
     </div>
 
@@ -56,10 +56,12 @@ const items = esData.experience.items;
       const orgEl = el.querySelector('.item-org');
       const roleEl = el.querySelector('.item-role');
       const periodEl = el.querySelector('.item-period');
+      const typeEl = el.querySelector('.item-type');
       const descEl = el.querySelector('.item-description');
       if (orgEl) orgEl.textContent = item.org;
       if (roleEl) roleEl.textContent = item.role;
       if (periodEl) periodEl.textContent = item.period;
+      if (typeEl) typeEl.textContent = item.type ?? '';
       if (descEl) descEl.textContent = item.description;
     });
   });

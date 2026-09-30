@@ -13,7 +13,7 @@ const categories = esData.skills.categories;
       <div class="section-bar"></div>
     </div>
 
-    <div id="skills-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;">
+    <div id="skills-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;">
       {categories.map((cat, i) => (
         <div class={`reveal reveal-delay-${i + 1} skills-category`} data-category-index={i}>
           <p class="font-mono text-accent uppercase category-label" style="font-size:10px;letter-spacing:0.2em;margin-bottom:20px;">// {cat.label}</p>
@@ -30,6 +30,9 @@ const categories = esData.skills.categories;
 </section>
 
 <style>
+  @media (max-width: 1024px) {
+    #skills-grid { grid-template-columns: repeat(2,1fr) !important; }
+  }
   @media (max-width: 768px) {
     #skills-grid { grid-template-columns: 1fr !important; }
   }

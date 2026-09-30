@@ -10,12 +10,12 @@
     "greeting": "// Hello, I'm",
     "name": "Enrique Such Andreu",
     "roles": [
-      "Digital Technology & Multimedia",
-      "Artificial Intelligence",
-      "2D/3D Design & Animation",
-      "Interactive Projects"
+      "Applied AI",
+      "Full-stack development",
+      "Digital product",
+      "Digital Technology & Multimedia"
     ],
-    "bio": "Creative–technical profile. Degree in Digital Technology and Multimedia (UPV) + Master's in AI (Università di Bologna, Erasmus). Passionate about the intersection of technology, creativity, and user experience.",
+    "bio": "Graduate in Digital Technology and Multimedia (UPV), with a bachelor's thesis on generative AI awarded with Honours. I build production software in Rankia's Product & Tech team: applied AI, full-stack and product.",
     "cta_primary": "View projects",
     "cta_secondary": "Contact",
     "scroll": "SCROLL",
@@ -23,16 +23,16 @@
   },
   "about": {
     "title": "About me",
-    "bio": "I'm Enrique Such Andreu, a Digital Technology and Multimedia student at UPV with a Master's in Artificial Intelligence from the University of Bologna (Erasmus). I move between technical and creative worlds: programming, computer vision, 3D animation, virtual reality, and web design. I look for projects that combine technology and user experience in innovative ways.",
+    "bio": "I'm Enrique Such Andreu, a Digital Technology and Multimedia graduate from UPV, with part of the Master's in Artificial Intelligence at the University of Bologna taken as an Erasmus+ student. I work in Rankia's Product & Tech team, building web applications and generative AI tools. My degree mixes the technical and the creative: programming, computer vision, 3D and virtual reality.",
     "education_label": "Education",
     "education": [
-      { "title": "Degree in Digital Technology and Multimedia", "org": "Universitat Politècnica de València" },
-      { "title": "Master's in Artificial Intelligence", "org": "Università di Bologna — Erasmus" }
+      { "title": "Degree in Digital Technology and Multimedia", "org": "Universitat Politècnica de València — Thesis awarded with Honours" },
+      { "title": "Master's in Artificial Intelligence", "org": "Università di Bologna — Erasmus+" }
     ],
     "languages_label": "Languages",
     "languages": [
       { "name": "Spanish", "level": "Native" },
-      { "name": "Valencian", "level": "Native" },
+      { "name": "Valencian", "level": "Native · C1" },
       { "name": "English", "level": "B2" },
       { "name": "Italian", "level": "Basic" }
     ]
@@ -40,6 +40,15 @@
   "projects": {
     "title": "Featured projects",
     "items": [
+      {
+        "id": 18,
+        "name": "Multimodal content with generative AI — Bachelor's thesis",
+        "description": "Bachelor's thesis, awarded with Honours. Tools that generate images, charts, audio, video and transcriptions from an article, using self-hosted open-source models on serverless GPUs.",
+        "tags": ["Generative AI", "Python", "FLUX", "Whisper"],
+        "github": "",
+        "image": "/img/projects/proj-18.svg",
+        "link": ""
+      },
       {
         "id": 1,
         "name": "Traffic sign detection",
@@ -80,7 +89,7 @@
         "id": 7,
         "name": "Voice-controlled games",
         "description": "Suite of 4 minigames responding to tone, volume and frequency with accessible UI",
-        "tags": ["Java", "C#", "Audio DSP"],
+        "tags": ["Python", "Pygame", "Audio DSP"],
         "github": "",
         "image": "/img/projects/proj-7.jpg",
         "link": "https://github.com/quique-such/minijuegos-sonoros"
@@ -125,7 +134,7 @@
         "id": 12,
         "name": "Android app — Water tank monitor",
         "description": "Native Android app that monitors a water tank in real time, communicating over UDP with a Java server. Includes in/out controls and flow visualization.",
-        "tags": ["Kotlin", "Android", "UDP"],
+        "tags": ["Java", "Android", "UDP"],
         "github": "",
         "image": "/img/projects/proj-12.jpg",
         "link": "https://github.com/quique-such/monitor-deposito-android"
@@ -138,15 +147,6 @@
         "github": "",
         "image": "/img/projects/proj-13.jpg",
         "link": "https://github.com/quique-such/sistema-cifrado-rsa-aes"
-      },
-      {
-        "id": 16,
-        "name": "Containers with Docker",
-        "description": "Hands-on Docker and containers workshop: Dockerfiles, images, registries, Kubernetes/Minikube and dev containers, with step-by-step documentation and diagrams.",
-        "tags": ["Docker", "Kubernetes", "DevOps"],
-        "github": "",
-        "image": "/img/projects/proj-16.jpg",
-        "link": "https://github.com/quique-such/docker-contenedores"
       },
       {
         "id": 17,
@@ -163,35 +163,32 @@
     "title": "Skills & tools",
     "categories": [
       {
-        "label": "Languages",
-        "items": ["Python", "JavaScript", "HTML/CSS", "Java", "Kotlin", "C++", "SQL", "C#"]
+        "label": "AI",
+        "items": ["LLMs", "MCP", "Claude Code", "LangChain", "FLUX", "Whisper", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas"]
       },
       {
-        "label": "Creative",
-        "items": ["Blender", "GIMP", "Unity 3D", "OBS Studio", "OpenSCAD", "Illustrator"]
+        "label": "Development",
+        "items": ["Python", "TypeScript", "JavaScript", "React", "FastAPI", "Next.js", "PHP / WordPress", "SQL", "Java", "C++", "C#", "HTML/CSS"]
       },
       {
-        "label": "Technical",
-        "items": ["Git/GitHub", "Docker", "Arduino", "Android Studio", "VS Code", "YOLOv8", "OpenCV", "scikit-learn", "NumPy / Pandas", "Microsoft Project"]
+        "label": "Cloud & tools",
+        "items": ["Google Cloud", "Firebase", "Docker", "GitHub Actions", "RunPod", "Git/GitHub", "Pytest", "Playwright", "Arduino", "Android Studio"]
+      },
+      {
+        "label": "Creative & product",
+        "items": ["Blender", "Unity 3D", "GIMP", "Illustrator", "Canva", "OBS Studio", "OpenSCAD", "Microsoft Project"]
       }
     ]
   },
   "experience": {
-    "title": "Experience & Activities",
+    "title": "Experience",
     "items": [
       {
-        "org": "Rankia S.L.",
+        "org": "Rankia",
         "role": "Product & Tech Trainee",
         "period": "Mar. 2026 – present",
         "type": "On-site",
-        "description": "Internship at Rankia, the largest Spanish-speaking financial community. Developing skills in a real professional environment within the digital and financial world."
-      },
-      {
-        "org": "Toma UNO UPV",
-        "role": "Collaborator — Generación Espontánea",
-        "period": "Sept. 2023 – Jan. 2024",
-        "type": "University",
-        "description": "Multidisciplinary teamwork on creative and technological projects. Organisation of creative events in the university environment."
+        "description": "I build internal web applications (React, TypeScript, FastAPI, Google Cloud), backend services and generative AI tools for the business. I also document the product with PRDs, user stories and test cases."
       }
     ]
   },

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 405" width="720" height="405" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1f1f1f"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#20c65a" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#20c65a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="405" fill="#0d0d0d"/>
+  <rect width="720" height="405" fill="url(#dots)"/>
+  <rect width="720" height="405" fill="url(#glow)"/>
+
+  <g fill="none" stroke="#20c65a" stroke-width="1.5" stroke-opacity="0.55">
+    <path d="M250 202 C 330 202, 330 72, 440 72"/>
+    <path d="M250 202 C 330 202, 330 137, 440 137"/>
+    <path d="M250 202 L 440 202"/>
+    <path d="M250 202 C 330 202, 330 267, 440 267"/>
+    <path d="M250 202 C 330 202, 330 332, 440 332"/>
+  </g>
+
+  <rect x="70" y="162" width="180" height="80" rx="12" fill="#161616" stroke="#20c65a" stroke-width="1.5"/>
+  <g stroke="#3a3a3a" stroke-width="3" stroke-linecap="round">
+    <line x1="92" y1="186" x2="150" y2="186"/>
+    <line x1="92" y1="200" x2="228" y2="200"/>
+    <line x1="92" y1="212" x2="228" y2="212"/>
+    <line x1="92" y1="224" x2="190" y2="224"/>
+  </g>
+
+  <g font-size="15" fill="#e5e5e5">
+    <g fill="#161616" stroke="#242424">
+      <rect x="440" y="50" width="210" height="44" rx="10"/>
+      <rect x="440" y="115" width="210" height="44" rx="10"/>
+      <rect x="440" y="180" width="210" height="44" rx="10"/>
+      <rect x="440" y="245" width="210" height="44" rx="10"/>
+      <rect x="440" y="310" width="210" height="44" rx="10"/>
+    </g>
+    <g fill="#20c65a">
+      <circle cx="464" cy="72" r="4"/>
+      <circle cx="464" cy="137" r="4"/>
+      <circle cx="464" cy="202" r="4"/>
+      <circle cx="464" cy="267" r="4"/>
+      <circle cx="464" cy="332" r="4"/>
+    </g>
+    <text x="482" y="77">imagen</text>
+    <text x="482" y="142">gráficos</text>
+    <text x="482" y="207">audio</text>
+    <text x="482" y="272">vídeo</text>
+    <text x="482" y="337">transcripción</text>
+  </g>
+
+  <text x="70" y="146" font-size="12" letter-spacing="2" fill="#20c65a">// ARTÍCULO</text>
+</svg>

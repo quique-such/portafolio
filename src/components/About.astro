@@ -1,5 +1,7 @@
 ---
 // About section — two-column, large photo right, education + languages left
+import esData from '../i18n/es.json';
+const { bio, education, languages } = esData.about;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
@@ -17,41 +19,29 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         </div>
 
         <p class="text-muted" style="font-size:15px;line-height:1.8;margin-bottom:32px;" data-i18n="about.bio">
-          Soy Enrique Such Andreu, estudiante de Tecnología Digital y Multimedia en la UPV con un Máster en Inteligencia Artificial cursado en la Universidad de Bolonia (Erasmus). Me muevo entre el mundo técnico y el creativo: programación, visión artificial, animación 3D, realidad virtual y diseño web. Busco proyectos que combinen tecnología y experiencia de usuario de forma innovadora.
+          {bio}
         </p>
 
         <!-- Education -->
         <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.education_label">Formación</p>
         <div id="about-education" style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
-          <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
-            <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;">Grado en Tecnología Digital y Multimedia</p>
-            <p class="font-mono text-muted" style="font-size:12px;">Universitat Politècnica de València</p>
-          </div>
-          <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
-            <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;">Máster en Inteligencia Artificial</p>
-            <p class="font-mono text-muted" style="font-size:12px;">Università di Bologna — Erasmus</p>
-          </div>
+          {education.map(item => (
+            <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
+              <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;">{item.title}</p>
+              <p class="font-mono text-muted" style="font-size:12px;">{item.org}</p>
+            </div>
+          ))}
         </div>
 
         <!-- Languages -->
         <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.languages_label">Idiomas</p>
         <div id="about-languages" style="display:flex;gap:8px;flex-wrap:wrap;">
-          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
-            <span class="text-text font-medium" style="font-size:13px;">Español</span>
-            <span class="font-mono text-accent" style="font-size:11px;">Nativo</span>
-          </div>
-          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
-            <span class="text-text font-medium" style="font-size:13px;">Valenciano</span>
-            <span class="font-mono text-accent" style="font-size:11px;">Nativo</span>
-          </div>
-          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
-            <span class="text-text font-medium" style="font-size:13px;">Inglés</span>
-            <span class="font-mono text-accent" style="font-size:11px;">B2</span>
-          </div>
-          <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
-            <span class="text-text font-medium" style="font-size:13px;">Italiano</span>
-            <span class="font-mono text-accent" style="font-size:11px;">Básico</span>
-          </div>
+          {languages.map(l => (
+            <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
+              <span class="text-text font-medium" style="font-size:13px;">{l.name}</span>
+              <span class="font-mono text-accent" style="font-size:11px;">{l.level}</span>
+            </div>
+          ))}
         </div>
       </div>
 
