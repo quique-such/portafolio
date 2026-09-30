@@ -24,7 +24,8 @@ Secciones en orden de aparición: `Hero → Projects → About → Skills → Ex
 
 ## i18n
 
-- Textos en `src/i18n/es.json` (base) y `src/i18n/en.json`. En build se copian a `dist/i18n/` y se sirven en `/i18n/<lang>.json`.
+- Textos en `src/i18n/es.json` (base) y `src/i18n/en.json`. `src/pages/i18n/[lang].json.ts` los sirve en `/i18n/<lang>.json`; no hay copia en `public/`.
+- El HTML inicial de cada sección se renderiza desde `es.json`, no hay textos duplicados en los componentes.
 - El toggle ES/EN en la navbar hace `fetch('/i18n/<lang>.json')` en cliente y despacha un `CustomEvent('langchange', { detail: { lang, translations } })` en `window`.
 - Elementos estáticos: atributo `data-i18n="key.path"` → `Base.astro` escribe el `textContent` automáticamente.
 - Contenido dinámico/JS (e.g. typewriter en Hero): escucha `window.addEventListener('langchange', ...)` y lee `e.detail.translations`.
@@ -36,7 +37,7 @@ Secciones en orden de aparición: `Hero → Projects → About → Skills → Ex
 - **Tailwind CSS** — tokens de color y tipografía en `tailwind.config.mjs`; las mismas variables en `src/styles/global.css`
 - **AOS** — inicializado una sola vez en `Base.astro` (`duration: 700, once: true, offset: 80`); usar atributos `data-aos`, `data-aos-delay`, `data-aos-duration` en los elementos
 - **Fuentes** — `font-sans` = Inter, `font-mono` = JetBrains Mono (Google Fonts, importadas en `global.css`)
-- **Netlify** — deploy automático desde `main`
+- **GitHub Pages** — cada push a `main` publica con `.github/workflows/deploy.yml` en https://quique-such.github.io/portafolio/ (`base: '/portafolio'` en `astro.config.mjs`)
 
 ## Paleta de colores (tokens Tailwind y variables CSS)
 
@@ -52,8 +53,7 @@ Secciones en orden de aparición: `Hero → Projects → About → Skills → Ex
 | `text`         | `--color-text`       | `#e5e5e5` |
 | `muted`        | `--color-muted`      | `#666666` |
 
-## Pendientes (Enrique debe aportar)
+## Contenido
 
-- Foto de perfil → `public/img/`
-- Capturas/imágenes de proyectos → `public/img/`
-- Textos en inglés (`src/i18n/en.json`) — completar al final del desarrollo
+- Los textos siguen el CV: sin cifras exactas, frases cortas y productos internos de Rankia descritos de forma genérica.
+- `public/Enrique-Such-Andreu-CV.pdf` es el CV que se descarga desde el Hero; se exporta del diseño de Canva.
