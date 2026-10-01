@@ -13,11 +13,11 @@ const categories = esData.skills.categories;
       <div class="section-bar"></div>
     </div>
 
-    <div id="skills-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;">
+    <div id="skills-grid">
       {categories.map((cat, i) => (
-        <div class={`reveal reveal-delay-${i + 1} skills-category`} data-category-index={i}>
-          <p class="font-mono text-accent uppercase category-label" style="font-size:10px;letter-spacing:0.2em;margin-bottom:20px;">// {cat.label}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;" class="category-pills">
+        <div class={`reveal reveal-delay-${i + 1}`}>
+          <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:20px;">// <span data-i18n={`skills.categories.${i}.label`}>{cat.label}</span></p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
             {cat.items.map(item => (
               <span class="skill-pill">{item}</span>
             ))}
@@ -30,21 +30,12 @@ const categories = esData.skills.categories;
 </section>
 
 <style>
+  #skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+  @media (max-width: 1024px) {
+    #skills-grid { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 768px) {
-    #skills-grid { grid-template-columns: 1fr !important; }
+    #skills-grid { grid-template-columns: 1fr; }
   }
 </style>
 
-<script>
-  window.addEventListener('langchange', (e: Event) => {
-    const { translations } = (e as CustomEvent).detail;
-    const categories = translations?.skills?.categories;
-    if (!Array.isArray(categories)) return;
-    categories.forEach((cat: { label: string; items: string[] }, i: number) => {
-      const col = document.querySelector(`[data-category-index="${i}"]`);
-      if (!col) return;
-      const labelEl = col.querySelector('.category-label');
-      if (labelEl) labelEl.textContent = `// ${cat.label}`;
-    });
-  });
-</script>

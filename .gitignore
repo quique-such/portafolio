@@ -1,7 +1,10 @@
 node_modules/
 dist/
+.astro/
 .env
 .DS_Store
 .tools/
+.superpowers/
+.gstack/
 Abrir Portafolio.bat
 LEEME.txt
