@@ -24,7 +24,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
         <!-- Education -->
         <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.education_label">Formación</p>
-        <div id="about-education" style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
           {education.map((item, i) => (
             <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
               <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;" data-i18n={`about.education.${i}.title`}>{item.title}</p>
@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
         <!-- Languages -->
         <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.languages_label">Idiomas</p>
-        <div id="about-languages" style="display:flex;gap:8px;flex-wrap:wrap;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
           {languages.map((l, i) => (
             <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
               <span class="text-text font-medium" style="font-size:13px;" data-i18n={`about.languages.${i}.name`}>{l.name}</span>

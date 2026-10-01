@@ -75,18 +75,12 @@ const url = new URL(`${base}/`, Astro.site);
     <!-- PAGE CONTENT -->
     <slot />
 
-    <script define:vars={{ base }}>
-      window.__BASE__ = base;
-    </script>
     <script>
       // ─── i18n ───────────────────────────────────────────────────────────────
+      const i18nBase = import.meta.env.BASE_URL.replace(/\/$/, '');
+      const cache: Record<string, Record<string, any>> = {};
       let translations: Record<string, any> = {};
       let currentLang = localStorage.getItem('lang') || 'es';
-
-      async function loadTranslations(lang: string) {
-        const res = await fetch(`${(window as any).__BASE__ ?? ''}/i18n/${lang}.json`);
-        translations = await res.json();
-      }
 
       function t(key: string): string {
         const keys = key.split('.');
@@ -106,7 +100,7 @@ const url = new URL(`${base}/`, Astro.site);
       async function setLang(lang: string) {
         currentLang = lang;
         localStorage.setItem('lang', lang);
-        await loadTranslations(lang);
+        translations = cache[lang] ??= await (await fetch(`${i18nBase}/i18n/${lang}.json`)).json();
         applyTranslations();
         window.dispatchEvent(new CustomEvent('langchange', { detail: { lang, translations } }));
       }

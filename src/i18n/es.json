@@ -45,7 +45,6 @@
         "name": "Contenido multimodal con IA generativa — TFG",
         "description": "Trabajo Fin de Grado, calificado con Matrícula de Honor. Herramientas que generan imagen, gráficos, audio, vídeo y transcripciones a partir de un artículo, con modelos open source autoalojados en GPU serverless.",
         "tags": ["IA generativa", "Python", "FLUX", "Whisper"],
-        "github": "",
         "image": "/img/projects/proj-18.svg",
         "link": ""
       },

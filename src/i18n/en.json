@@ -45,7 +45,6 @@
         "name": "Multimodal content with generative AI — Bachelor's thesis",
         "description": "Bachelor's thesis, awarded with Honours. Tools that generate images, charts, audio, video and transcriptions from an article, using self-hosted open-source models on serverless GPUs.",
         "tags": ["Generative AI", "Python", "FLUX", "Whisper"],
-        "github": "",
         "image": "/img/projects/proj-18.svg",
         "link": ""
       },
