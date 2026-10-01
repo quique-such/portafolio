@@ -88,7 +88,7 @@
       {
         "id": 7,
         "name": "Voice-controlled games",
-        "description": "Suite of 4 minigames responding to tone, volume and frequency with accessible UI",
+        "description": "Voice-controlled minigames that respond to pitch, volume and frequency, with an accessible UI",
         "tags": ["Python", "Pygame", "Audio DSP"],
         "github": "",
         "image": "/img/projects/proj-7.jpg",

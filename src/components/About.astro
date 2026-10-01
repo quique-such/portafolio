@@ -25,10 +25,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <!-- Education -->
         <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.education_label">Formación</p>
         <div id="about-education" style="display:flex;flex-direction:column;gap:8px;margin-bottom:32px;">
-          {education.map(item => (
+          {education.map((item, i) => (
             <div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
-              <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;">{item.title}</p>
-              <p class="font-mono text-muted" style="font-size:12px;">{item.org}</p>
+              <p class="text-text font-semibold" style="font-size:13px;margin-bottom:2px;" data-i18n={`about.education.${i}.title`}>{item.title}</p>
+              <p class="font-mono text-muted" style="font-size:12px;" data-i18n={`about.education.${i}.org`}>{item.org}</p>
             </div>
           ))}
         </div>
@@ -36,10 +36,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <!-- Languages -->
         <p class="font-mono text-accent uppercase" style="font-size:10px;letter-spacing:0.2em;margin-bottom:14px;" data-i18n="about.languages_label">Idiomas</p>
         <div id="about-languages" style="display:flex;gap:8px;flex-wrap:wrap;">
-          {languages.map(l => (
+          {languages.map((l, i) => (
             <div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
-              <span class="text-text font-medium" style="font-size:13px;">{l.name}</span>
-              <span class="font-mono text-accent" style="font-size:11px;">{l.level}</span>
+              <span class="text-text font-medium" style="font-size:13px;" data-i18n={`about.languages.${i}.name`}>{l.name}</span>
+              <span class="font-mono text-accent" style="font-size:11px;" data-i18n={`about.languages.${i}.level`}>{l.level}</span>
             </div>
           ))}
         </div>
@@ -84,33 +84,3 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     }
   }
 </style>
-
-<script>
-  window.addEventListener('langchange', (e: Event) => {
-    const { translations } = (e as CustomEvent).detail;
-    const a = translations?.about;
-    if (!a) return;
-
-    // Education
-    const eduEl = document.getElementById('about-education');
-    if (eduEl && Array.isArray(a.education)) {
-      eduEl.innerHTML = a.education.map((item: { title: string; org: string }) =>
-        `<div style="background:#161616;border:1px solid #242424;border-radius:8px;padding:14px 16px;">
-          <p style="font-size:13px;font-weight:600;color:#e8e8e8;margin-bottom:2px;">${item.title}</p>
-          <p style="font-size:12px;color:#5a5a5a;font-family:'JetBrains Mono',monospace;">${item.org}</p>
-        </div>`
-      ).join('');
-    }
-
-    // Languages
-    const langEl = document.getElementById('about-languages');
-    if (langEl && Array.isArray(a.languages)) {
-      langEl.innerHTML = a.languages.map((l: { name: string; level: string }) =>
-        `<div style="border:1px solid #242424;border-radius:8px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;background:#161616;">
-          <span style="font-size:13px;color:#e8e8e8;font-weight:500;">${l.name}</span>
-          <span style="font-size:11px;color:#20c65a;font-family:'JetBrains Mono',monospace;">${l.level}</span>
-        </div>`
-      ).join('');
-    }
-  });
-</script>

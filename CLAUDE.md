@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Portfolio personal de Enrique Such Andreu — sitio estático bilingüe (ES/EN) construido con **Astro 4 + Tailwind CSS + AOS**. Spec de diseño en `docs/superpowers/specs/2026-04-13-portfolio-design.md`.
+Portfolio personal de Enrique Such Andreu — sitio estático bilingüe (ES/EN) construido con **Astro 4 + Tailwind CSS**. Spec de diseño en `docs/superpowers/specs/2026-04-13-portfolio-design.md`.
 
 ## Commands
 
@@ -18,16 +18,16 @@ No hay linter ni tests configurados. TypeScript solo para type-checking.
 
 ## Arquitectura
 
-Single page: `src/pages/index.astro` ensambla los componentes sección a sección. `src/layouts/Base.astro` envuelve todo con el HTML base, la navbar sticky y toda la lógica JS (AOS, i18n, scroll, menú móvil).
+Single page: `src/pages/index.astro` ensambla los componentes sección a sección. `src/layouts/Base.astro` envuelve todo con el HTML base, la navbar sticky y toda la lógica JS (i18n, scroll, animaciones de entrada, menú móvil).
 
 Secciones en orden de aparición: `Hero → Projects → About → Skills → Experience → Contact`, cada una en `src/components/`. IDs de ancla: `#hero`, `#projects`, `#about`, `#skills`, `#experience`, `#contact`.
 
 ## i18n
 
 - Textos en `src/i18n/es.json` (base) y `src/i18n/en.json`. `src/pages/i18n/[lang].json.ts` los sirve en `/i18n/<lang>.json`; no hay copia en `public/`.
-- El HTML inicial de cada sección se renderiza desde `es.json`, no hay textos duplicados en los componentes.
+- El contenido (bio, proyectos, formación, idiomas, skills, experiencia) se renderiza desde `es.json`. Los títulos de sección, botones y navbar siguen escritos en los componentes y se traducen con `data-i18n`: si cambias uno, cámbialo también en `es.json`.
 - El toggle ES/EN en la navbar hace `fetch('/i18n/<lang>.json')` en cliente y despacha un `CustomEvent('langchange', { detail: { lang, translations } })` en `window`.
-- Elementos estáticos: atributo `data-i18n="key.path"` → `Base.astro` escribe el `textContent` automáticamente.
+- Elementos estáticos: atributo `data-i18n="key.path"` → `Base.astro` escribe el `textContent` automáticamente. Admite índices de array (`about.education.0.title`).
 - Contenido dinámico/JS (e.g. typewriter en Hero): escucha `window.addEventListener('langchange', ...)` y lee `e.detail.translations`.
 - Idioma persistido en `localStorage` bajo la clave `'lang'`.
 
@@ -35,7 +35,7 @@ Secciones en orden de aparición: `Hero → Projects → About → Skills → Ex
 
 - **Astro** — `astro.config.mjs`, devToolbar desactivado
 - **Tailwind CSS** — tokens de color y tipografía en `tailwind.config.mjs`; las mismas variables en `src/styles/global.css`
-- **AOS** — inicializado una sola vez en `Base.astro` (`duration: 700, once: true, offset: 80`); usar atributos `data-aos`, `data-aos-delay`, `data-aos-duration` en los elementos
+- **Animaciones** — clase `.reveal` (y `.reveal-delay-1…4`); un `IntersectionObserver` en `Base.astro` añade `.visible` al entrar en pantalla
 - **Fuentes** — `font-sans` = Inter, `font-mono` = JetBrains Mono (Google Fonts, importadas en `global.css`)
 - **GitHub Pages** — cada push a `main` publica con `.github/workflows/deploy.yml` en https://quique-such.github.io/portafolio/ (`base: '/portafolio'` en `astro.config.mjs`)
 

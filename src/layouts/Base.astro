@@ -111,11 +111,7 @@ const url = new URL(`${base}/`, Astro.site);
         window.dispatchEvent(new CustomEvent('langchange', { detail: { lang, translations } }));
       }
 
-      (async () => {
-        await loadTranslations(currentLang);
-        applyTranslations();
-        window.dispatchEvent(new CustomEvent('langchange', { detail: { lang: currentLang, translations } }));
-      })();
+      if (currentLang !== 'es') setLang(currentLang);
 
       document.getElementById('lang-toggle')?.addEventListener('click', () => setLang(currentLang === 'es' ? 'en' : 'es'));
       document.getElementById('lang-toggle-mobile')?.addEventListener('click', () => setLang(currentLang === 'es' ? 'en' : 'es'));
